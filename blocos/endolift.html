@@ -1,0 +1,45 @@
+<section class="blk-endo" id="endolift">
+  <div class="blk-endo__in">
+    <div class="blk-endo__texto" data-reveal>
+      <p class="blk-endo__eyebrow">A especialidade da casa</p>
+      <h2 class="blk-endo__h2">Endolift: o laser trabalha por baixo da pele</h2>
+      <p class="blk-endo__p" data-acende>Uma fibra ótica mais fina que um fio de cabelo entra por um pertuito mínimo, sem corte e sem pontos, e leva a energia do laser direto à camada onde estão a gordura localizada e a pele que perdeu firmeza. Por fora, quase nada a mostrar; por dentro, o colágeno volta a trabalhar nos meses seguintes.</p>
+      <ul class="blk-endo__areas">
+        <li><!--icone:rosto--> Papada e linha da mandíbula</li>
+        <li><!--icone:pele--> Flacidez do terço inferior do rosto</li>
+        <li><!--icone:laser--> Pescoço e contorno</li>
+      </ul>
+    </div>
+    <figure class="blk-endo__corte" aria-hidden="true" data-reveal style="--d:140ms">
+      <div class="blk-endo__cam blk-endo__cam--epi"><span>Pele</span></div>
+      <div class="blk-endo__cam blk-endo__cam--der"><span>Derme · colágeno</span></div>
+      <div class="blk-endo__cam blk-endo__cam--gor"><span>Gordura localizada</span></div>
+      <div class="blk-endo__fibra"><i></i></div>
+      <figcaption class="blk-endo__leg">Esquema ilustrativo · a fibra percorre a camada sob a pele</figcaption>
+    </figure>
+  </div>
+</section>
+<style>
+.blk-endo { padding: clamp(64px, 12vw, 128px) 20px; background: var(--bg); color: var(--ink); }
+.blk-endo__in { max-width: 1120px; margin: 0 auto; display: grid; gap: 44px; }
+.blk-endo__eyebrow { margin: 0 0 12px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--brand); }
+.blk-endo__h2 { margin: 0 0 20px; font-family: var(--f-display); font-weight: 400; font-size: clamp(32px, 7vw, 54px); line-height: 1.06; text-wrap: balance; }
+.blk-endo__p { margin: 0 0 28px; font-size: 17px; line-height: 1.65; max-width: 48ch; }
+.blk-endo__areas { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.blk-endo__areas li { display: flex; gap: 12px; align-items: center; font-size: 16px; }
+.blk-endo__areas svg { width: 22px; height: 22px; flex: none; color: var(--brand); }
+.blk-endo__corte { position: relative; margin: 0; border-radius: var(--r); overflow: hidden; display: grid; grid-template-rows: 18% 32% 50%; aspect-ratio: 4 / 3.4; box-shadow: 0 30px 70px -40px color-mix(in srgb, var(--ink) 60%, transparent); }
+.blk-endo__cam { position: relative; display: flex; align-items: flex-start; justify-content: flex-end; padding: 10px 14px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.blk-endo__cam--epi { background: color-mix(in srgb, var(--pulse, var(--brand)) 55%, var(--bg)); }
+.blk-endo__cam--der { background: color-mix(in srgb, var(--pulse, var(--brand)) 32%, var(--bg)); background-image: repeating-linear-gradient(100deg, transparent 0 14px, color-mix(in srgb, var(--brand) 14%, transparent) 14px 15px); }
+.blk-endo__cam--gor { background: color-mix(in srgb, var(--pulse, var(--brand)) 14%, var(--bg)); background-image: radial-gradient(circle at 20% 40%, color-mix(in srgb, var(--brand) 10%, transparent) 0 22px, transparent 23px), radial-gradient(circle at 55% 70%, color-mix(in srgb, var(--brand) 10%, transparent) 0 28px, transparent 29px), radial-gradient(circle at 85% 35%, color-mix(in srgb, var(--brand) 10%, transparent) 0 20px, transparent 21px); }
+.blk-endo__cam span { opacity: .7; }
+.blk-endo__fibra { position: absolute; left: -4%; top: 56%; width: 92%; height: 3px; transform: rotate(-6deg); transform-origin: left center; background: color-mix(in srgb, var(--ink) 70%, transparent); border-radius: 3px; }
+.blk-endo__fibra i { position: absolute; right: -6px; top: 50%; width: 16px; height: 16px; margin-top: -8px; border-radius: 50%; background: var(--pulse, var(--brand)); box-shadow: 0 0 0 6px color-mix(in srgb, var(--pulse, var(--brand)) 35%, transparent), 0 0 40px 18px color-mix(in srgb, var(--pulse, var(--brand)) 55%, transparent); animation: blkEndoPulso 2.4s ease-in-out infinite; }
+@keyframes blkEndoPulso { 50% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--pulse, var(--brand)) 20%, transparent), 0 0 60px 26px color-mix(in srgb, var(--pulse, var(--brand)) 40%, transparent); } }
+.blk-endo__leg { position: absolute; left: 14px; bottom: 10px; font-size: 11px; opacity: .6; }
+@media (prefers-reduced-motion: reduce) { .blk-endo__fibra i { animation: none; } }
+@media (min-width: 900px) {
+  .blk-endo__in { grid-template-columns: 1fr 1fr; align-items: center; column-gap: 80px; }
+}
+</style>

@@ -1,0 +1,271 @@
+{
+  "slug": "tati-panato",
+  "negocio": {
+    "nome": "Dra. Tati Panato",
+    "whatsapp": "5531993345014",
+    "funcionamento": {
+      "seg": "10:00-19:00",
+      "ter": "10:00-19:00",
+      "qua": "10:00-19:00",
+      "qui": "10:00-19:00",
+      "sex": "10:00-19:00",
+      "sab": null,
+      "dom": null
+    },
+    "unidades": [
+      {
+        "bairro": "Funcionários · Belo Horizonte/MG",
+        "endereco": "Av. Getúlio Vargas, 54 · Centro Comercial Getúlio Vargas",
+        "telefone": "(31) 99334-5014 · WhatsApp",
+        "horario": "Seg a sex, 10h às 19h · entrada e banheiro acessíveis"
+      }
+    ]
+  },
+  "marca": {
+    "brand": "#7a5546",
+    "brand2": "#4a332b",
+    "ink": "#2a201c",
+    "bg": "#f7f2ee",
+    "pulse": "#c9a07e",
+    "radius": "6px",
+    "registro": "editorial",
+    "fontDisplay": "Bodoni Moda",
+    "fontBody": "Jost",
+    "tomHero": "claro",
+    "tomCorpo": "claro"
+  },
+  "motivo": "luz",
+  "secoes": [
+    {
+      "id": "header",
+      "variant": "sticky-cta",
+      "data": {
+        "links": [
+          {
+            "texto": "Endolift",
+            "href": "#endolift"
+          },
+          {
+            "texto": "Tratamentos",
+            "href": "#tratamentos"
+          },
+          {
+            "texto": "Trajetória",
+            "href": "#trajetoria"
+          },
+          {
+            "texto": "Onde estamos",
+            "href": "#unidades"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hero",
+      "variant": "split-motivo",
+      "data": {
+        "eyebrow": "Endolift e estética facial · Funcionários, BH",
+        "h1": "Papada e contorno do rosto, sem cirurgia",
+        "lead": "Endolift, toxina botulínica, preenchimento e fios de PDO, indicados por uma farmacêutica esteta que olha primeiro para o seu histórico e só depois para o procedimento.",
+        "cta": "Agendar avaliação",
+        "ctaSecundario": "Como o Endolift funciona",
+        "ctaSecundarioHref": "#endolift",
+        "selo": "Endolift BH · desde 2021",
+        "cardTitulo": "Fale com a clínica",
+        "arte": "grao"
+      }
+    },
+    {
+      "id": "fita",
+      "data": {
+        "itens": [
+          "Endolift",
+          "Endolaser",
+          "Toxina botulínica",
+          "Preenchimento facial",
+          "Fios de PDO",
+          "Papada",
+          "Contorno mandibular"
+        ]
+      }
+    },
+    {
+      "custom": "blocos/endolift.html"
+    },
+    {
+      "id": "numeros",
+      "variant": "vivo",
+      "data": {
+        "titulo": "Antes de agendar, os números",
+        "itens": [
+          {
+            "valor": "4,9",
+            "rotulo": "Nota no Google Maps"
+          },
+          {
+            "valor": "93",
+            "rotulo": "Avaliações públicas de pacientes",
+            "contar": 93
+          },
+          {
+            "valor": "2021",
+            "rotulo": "Ano em que o consultório abriu no Funcionários",
+            "contar": 2021
+          }
+        ]
+      }
+    },
+    {
+      "id": "tratamentos",
+      "variant": "pilha",
+      "data": {
+        "titulo": "Tratamentos",
+        "lead": "Procedimentos não cirúrgicos para o rosto. A indicação sai da avaliação, não da lista.",
+        "itens": [
+          {
+            "nome": "Endolift",
+            "descricao": "Laser aplicado por uma fibra fina sob a pele, sem corte. Trata papada, contorno da mandíbula e flacidez, e o resultado continua a se formar nos meses seguintes.",
+            "icone": "laser"
+          },
+          {
+            "nome": "Endolaser",
+            "descricao": "A mesma tecnologia de fibra levada a outras regiões com gordura localizada e pele frouxa, planejada caso a caso.",
+            "icone": "pele"
+          },
+          {
+            "nome": "Toxina botulínica",
+            "descricao": "Suaviza as linhas de expressão da testa, da glabela e dos olhos, na dose que mantém o rosto com movimento.",
+            "icone": "seringa"
+          },
+          {
+            "nome": "Preenchimento facial",
+            "descricao": "Ácido hialurônico para devolver volume e definir contorno onde o rosto perdeu estrutura, respeitando a sua proporção.",
+            "icone": "gota"
+          },
+          {
+            "nome": "Fios de PDO",
+            "descricao": "Fios absorvíveis que dão sustentação à pele e estimulam colágeno ao longo do caminho em que são posicionados.",
+            "icone": "rosto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversa",
+      "variant": "celular",
+      "data": {
+        "eyebrow": "Pelo WhatsApp",
+        "titulo": "A dúvida que quase todo mundo manda primeiro",
+        "lead": "Respostas diretas, de segunda a sexta. A avaliação é marcada pela mesma conversa.",
+        "cta": "Mandar a minha dúvida",
+        "contato": "Dra. Tati Panato",
+        "mensagens": [
+          {
+            "de": "paciente",
+            "texto": "Oi! O Endolift resolve papada? Tenho medo de ficar marcada."
+          },
+          {
+            "de": "clinica",
+            "texto": "Oi! Resolve em muitos casos, sim. É feito sem corte: só um pontinho de entrada para a fibra, que some em poucos dias."
+          },
+          {
+            "de": "paciente",
+            "texto": "E dá para voltar a trabalhar no dia seguinte?"
+          },
+          {
+            "de": "clinica",
+            "texto": "A maioria volta, com um pouco de inchaço. Na avaliação a Dra. Tati vê se o seu caso é para Endolift ou para outro tratamento. Quer um horário esta semana?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "passos",
+      "variant": "timeline",
+      "data": {
+        "titulo": "Do primeiro contato ao retorno",
+        "itens": [
+          {
+            "titulo": "Conversa pelo WhatsApp",
+            "texto": "Você conta o que te incomoda e marca a avaliação.",
+            "icone": "conversa"
+          },
+          {
+            "titulo": "Avaliação",
+            "texto": "Histórico, medicamentos em uso e procedimentos anteriores, antes de qualquer indicação.",
+            "icone": "check"
+          },
+          {
+            "titulo": "Procedimento",
+            "texto": "No consultório, no Funcionários, com anestesia local quando o tratamento pede.",
+            "icone": "laser"
+          },
+          {
+            "titulo": "Retorno",
+            "texto": "Acompanhamento do resultado nas semanas seguintes e o próximo passo, se houver.",
+            "icone": "agenda"
+          }
+        ]
+      }
+    },
+    {
+      "custom": "blocos/trajetoria.html"
+    },
+    {
+      "id": "faq",
+      "variant": "colunas",
+      "data": {
+        "titulo": "Perguntas frequentes",
+        "itens": [
+          {
+            "p": "O Endolift dói?",
+            "r": "É feito com anestesia local na região tratada. A maioria das pacientes descreve um incômodo leve e calor durante a aplicação."
+          },
+          {
+            "p": "Fica marca?",
+            "r": "A fibra entra por um ponto mínimo, sem corte e sem pontos. Pode haver inchaço e pequenos roxos nos primeiros dias."
+          },
+          {
+            "p": "Quando aparece o resultado?",
+            "r": "Parte do efeito aparece logo; o restante vem com a produção de colágeno, ao longo dos meses seguintes."
+          },
+          {
+            "p": "Toxina e preenchimento podem ser feitos junto?",
+            "r": "Muitas vezes, sim, mas a ordem e o intervalo entre os procedimentos são definidos na avaliação."
+          },
+          {
+            "p": "Quem faz os procedimentos?",
+            "r": "A própria Dra. Tati Panato, farmacêutica com especialização em estética avançada."
+          },
+          {
+            "p": "Como agendar?",
+            "r": "Pelo WhatsApp (31) 99334-5014. A avaliação vem antes de qualquer procedimento."
+          }
+        ]
+      }
+    },
+    {
+      "id": "unidades",
+      "variant": "unica",
+      "data": {
+        "titulo": "Onde estamos"
+      }
+    },
+    {
+      "id": "cta-final",
+      "variant": "bloco-cheio",
+      "data": {
+        "h2": "Comece pela avaliação",
+        "lead": "Conte o que te incomoda no rosto e marque um horário no Funcionários.",
+        "cta": "Agendar pelo WhatsApp"
+      }
+    },
+    {
+      "id": "footer",
+      "variant": "completo",
+      "data": {
+        "aviso": "Resultados variam de pessoa para pessoa. A indicação de qualquer procedimento depende de avaliação individual."
+      }
+    }
+  ]
+}
