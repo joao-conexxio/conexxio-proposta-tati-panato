@@ -1,0 +1,1530 @@
+<!doctype html>
+<html lang="pt-BR" class="registro-editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dra. Tati Panato</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dra. Tati Panato · nova versão do site">
+<meta property="og:description" content="Endolift, toxina botulínica, preenchimento e fios de PDO, indicados por uma farmacêutica esteta que olha primeiro para o seu histórico e só depois para o procedimento.">
+<meta property="og:url" content="https://joao-conexxio.github.io/conexxio-proposta-tati-panato/">
+<meta property="og:image" content="https://joao-conexxio.github.io/conexxio-proposta-tati-panato/previa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&amp;family=Jost:wght@400;500;600&amp;display=swap">
+<style>/* Padrões neutros do kit. A proposta sobrescreve pelo bloco injetado
+   pelo build.mjs, que vem depois deste arquivo no CSS final. */
+:root{
+  /* Verde de "aberto agora": sinal universal, não cor de marca. */
+  --verde-aberto:#22c55e;
+  --brand:#0a7d6b;
+  --brand-2:#064e42;
+  --ink:#111634;
+  /* Derivados de --ink, não fixos: a marca define o ink e todo o texto
+     secundário e as réguas acompanham. Fixá-los prendia a página inteira ao
+     azul do padrão clínico, mesmo numa paleta quente. Mesmas proporções que
+     os valores literais que estavam aqui, e o mesmo color-mix já usado pela
+     família --on-dark-*. */
+  --ink-soft:color-mix(in srgb, var(--ink) 76%, var(--bg));
+  --ink-dim:color-mix(in srgb, var(--ink) 52%, var(--bg));
+  --bg:#F6F7F9;
+  --bg-2:#FFFFFF;
+  --line:color-mix(in srgb, var(--ink) 14%, transparent);
+  --line-strong:color-mix(in srgb, var(--ink) 26%, transparent);
+  --pulse:#DC5648;
+
+  --f-display:Georgia,'Times New Roman',serif;
+  --f-body:-apple-system,system-ui,sans-serif;
+
+  --t-hero:clamp(2.65rem,1.6rem + 4.6vw,5.1rem);
+  --t-h2:clamp(1.85rem,1.3rem + 2.2vw,3rem);
+  --t-h3:clamp(1.15rem,1.05rem + .4vw,1.4rem);
+  --t-lead:clamp(1.03rem,.98rem + .35vw,1.2rem);
+  --t-sm:.94rem;
+  --t-label:.71rem;
+
+  --wrap:1180px;
+  --wrap-narrow:760px;
+  --gutter:clamp(1.15rem,4vw,2.5rem);
+  --sp-1:.5rem; --sp-2:.85rem; --sp-3:1.4rem; --sp-4:2.2rem; --sp-5:3.4rem;
+  --sp-section:clamp(4.5rem,3.2rem + 5.5vw,7.5rem);
+
+  --r:6px;
+  --r-lg:14px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+
+  /* Superfícies escuras: qualquer seção pode se comprometer com um campo
+     saturado sem que a proposta precise declarar uma cor a mais. --ink já
+     é obrigatório e, por definição, escuro o bastante para texto sobre
+     --bg — então serve de --surface-dark em qualquer paleta de marca.
+     Tudo aqui deriva dos mesmos seis tokens de marca via color-mix. */
+  --surface-dark:var(--ink);
+  --surface-dark-2:color-mix(in srgb, var(--bg-2) 8%, var(--ink));
+  --on-dark:var(--bg-2);
+  --on-dark-soft:color-mix(in srgb, var(--bg-2) 74%, transparent);
+  --on-dark-dim:color-mix(in srgb, var(--bg-2) 52%, transparent);
+  --on-dark-line:color-mix(in srgb, var(--bg-2) 16%, transparent);
+  --on-dark-line-strong:color-mix(in srgb, var(--bg-2) 30%, transparent);
+}
+
+/* Ritmo por registro. O :root acima traz os valores clínicos como padrão —
+   estes blocos só os substituem. Nenhuma cor aqui: registro é ritmo, não
+   paleta; a paleta continua vindo inteira de marca.*. */
+:root{
+  --lh-display:1.08;
+  --lh-body:1.6;
+  --lh-h3:1.25;
+  --eyebrow-track:.16em;
+}
+.registro-editorial{
+  --t-hero:clamp(3rem,2rem + 6vw,6.5rem);
+  --t-h2:clamp(2.1rem,1.5rem + 3vw,3.8rem);
+  --lh-display:1.02;
+  --lh-body:1.75;
+  --lh-h3:1.18;
+  --eyebrow-track:.34em;
+  --wrap-narrow:640px;
+  --sp-section:clamp(6.5rem,4.5rem + 8vw,12rem);
+}
+
+/* Página escura: cliente cujo site é escuro. A marca chega com --bg escuro e
+   --ink claro (o extrator lê assim), então os tokens que assumiam "bg claro,
+   ink escuro" se invertem aqui: --bg-2 deixa de ser o branco das superfícies
+   e vira um degrau acima do fundo; superfície escura vira um degrau abaixo;
+   o texto sobre ela continua sendo o ink. Nenhuma cor nova a declarar. */
+.pagina-escura{
+  --bg-2:color-mix(in srgb, var(--bg) 90%, var(--ink));
+  --surface-dark:color-mix(in srgb, var(--bg) 70%, #000);
+  --surface-dark-2:color-mix(in srgb, var(--bg) 84%, var(--ink));
+  --on-dark:var(--ink);
+  --on-dark-soft:color-mix(in srgb, var(--ink) 74%, transparent);
+  --on-dark-dim:color-mix(in srgb, var(--ink) 52%, transparent);
+  --on-dark-line:color-mix(in srgb, var(--ink) 16%, transparent);
+  --on-dark-line-strong:color-mix(in srgb, var(--ink) 30%, transparent);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:var(--f-body);font-size:1rem;line-height:var(--lh-body);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg,video{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:3px}
+
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap--narrow{max-width:var(--wrap-narrow)}
+.section{padding-block:var(--sp-section)}
+.section--tight{padding-block:var(--sp-5)}
+.grid{display:grid;gap:var(--sp-3)}
+.grid--2{grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr))}
+.grid--3{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+.stack>*+*{margin-top:var(--sp-2)}
+.cluster{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center}
+
+/* Divisor entre seções, genérico para qualquer motivo: um <div class="rule">
+   envolvendo o <svg> de uma escala "rule". Cada motivo só estiliza o miolo
+   (o <svg>/<path> em si) no seu próprio motif.css. */
+.rule{
+  position:relative;height:1px;background:var(--line);
+  max-width:var(--wrap);margin-inline:auto;
+}
+.rule svg{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:104px;height:46px;
+  background:var(--bg);padding-inline:10px;
+}
+
+.js [data-reveal]{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .8s var(--ease) var(--d,0ms),transform .8s var(--ease) var(--d,0ms);
+}
+.js [data-reveal].is-in{opacity:1;transform:none}
+[data-tilt]{transition:transform .35s var(--ease);will-change:transform}
+[data-glow]{position:relative;isolation:isolate}
+[data-glow]::before{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  border-radius:inherit;opacity:.5;
+  background:radial-gradient(
+    18rem circle at var(--gx,50%) var(--gy,50%),
+    color-mix(in srgb, var(--brand) 22%, transparent), transparent 65%);
+}
+@media (prefers-reduced-motion:reduce){
+  .js [data-reveal]{opacity:1;transform:none;transition:none}
+  [data-tilt]{transition:none}
+}
+
+/* Título que sobe palavra por palavra (motion.js quebra em .w). */
+.js [data-palavras] .w{
+  display:inline-block;opacity:0;transform:translateY(.45em);
+  animation:palavra-sobe .9s var(--ease) forwards;
+  animation-delay:calc(var(--d,0ms) + var(--i,0) * 70ms);
+}
+@keyframes palavra-sobe{to{opacity:1;transform:none}}
+
+/* Texto que acende com a rolagem (motion.js quebra em .p e liga .on). */
+[data-acende] .p{opacity:.16;transition:opacity .35s var(--ease)}
+[data-acende] .p.on{opacity:1}
+
+/* Cartões que empilham: cada um gruda um degrau abaixo do anterior; o
+   motion.js encolhe o de baixo quando o próximo encosta. */
+[data-pilha]>*{
+  position:sticky;top:calc(4.5rem + var(--n,0) * .75rem);
+  transform-origin:top center;will-change:transform;
+}
+
+/* Foto do cliente (ctx.foto): véu suave na cor da marca para fotos de origens
+   diferentes lerem como uma série, e revelação de cima para baixo no scroll. */
+.foto{position:relative;margin:0;overflow:hidden;border-radius:var(--r-lg);background:var(--bg-2);isolation:isolate}
+.foto img{display:block;width:100%;height:100%;object-fit:cover}
+.foto::after{
+  content:'';position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;
+  background:linear-gradient(160deg, color-mix(in srgb, var(--brand) 16%, transparent), transparent 55%, color-mix(in srgb, var(--brand-2) 20%, transparent));
+}
+/* O recorte fica na img, nunca na figura observada: o IntersectionObserver
+   do Chromium respeita o clip-path do próprio alvo, e uma figura recortada a
+   zero nunca "entra" na tela — a foto ficaria escondida para sempre. */
+.js .foto[data-revela] img{
+  clip-path:inset(0 0 100% 0);transform:scale(1.12);
+  transition:clip-path 1.1s var(--ease),transform 1.8s var(--ease);
+}
+.js .foto[data-revela].is-in img{clip-path:inset(0);transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .foto[data-revela] img{clip-path:none;transform:none;transition:none}
+}
+
+/* Seção viva ([data-vivo]): campo escuro com o fundo vivo da marca por trás
+   (wow/fundo-vivo.js pinta o canvas.vivo de cada uma). Sem WebGL, gradiente
+   estático com as mesmas cores. */
+[data-vivo]{
+  position:relative;overflow:hidden;isolation:isolate;
+  background:var(--surface-dark);color:var(--on-dark);
+  --vivo-bg:var(--surface-dark);--vivo-1:var(--brand);
+  --vivo-2:color-mix(in srgb, var(--brand-2) 70%, var(--pulse));--vivo-3:var(--pulse);
+}
+[data-vivo]>.vivo{position:absolute;inset:0;z-index:-1;width:100%;height:100%;display:block;pointer-events:none}
+[data-vivo].vivo--estatico{
+  background:
+    radial-gradient(60% 50% at 85% 15%, color-mix(in srgb, var(--brand) 55%, transparent), transparent 70%),
+    radial-gradient(55% 45% at 10% 95%, color-mix(in srgb, var(--pulse) 30%, transparent), transparent 70%),
+    var(--surface-dark);
+}
+[data-vivo] .lead,[data-vivo] .nums__rotulo{color:var(--on-dark-soft)}
+[data-vivo] .eyebrow{color:var(--acento-escuro)}
+[data-vivo] .btn{background:var(--pulse);color:var(--on-pulse)}
+.nums--vivo .nums__lista{grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr))}
+.nums--vivo .nums__valor{color:var(--on-dark)}
+.cta--vivo{padding-block:var(--sp-section);text-align:center}
+
+h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:var(--lh-display);letter-spacing:-.02em}
+h1{font-size:var(--t-hero)}
+h2{font-size:var(--t-h2)}
+h3{font-size:var(--t-h3);line-height:var(--lh-h3)}
+.lead{font-size:var(--t-lead);color:var(--ink-soft);max-width:52ch;line-height:var(--lh-body)}
+.eyebrow{
+  font-size:var(--t-label);letter-spacing:var(--eyebrow-track);text-transform:uppercase;
+  color:var(--ink-dim);font-weight:600;
+}
+.small{font-size:var(--t-sm);color:var(--ink-soft)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.85rem 1.5rem;border-radius:var(--r);border:1px solid transparent;
+  background:var(--brand);color:var(--on-brand);
+  font-weight:600;text-decoration:none;cursor:pointer;
+  transition:transform .25s var(--ease),background .25s var(--ease);
+}
+.btn:hover{background:var(--brand-2);transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--brand);border-color:var(--line-strong)}
+.btn--ghost:hover{background:var(--bg-2);color:var(--brand-2)}
+.chip{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.35rem .8rem;border-radius:999px;border:1px solid var(--line);
+  font-size:var(--t-sm);color:var(--ink-soft);background:var(--bg-2);
+}
+@media (prefers-reduced-motion:reduce){
+  .btn{transition:none}
+  .btn:hover{transform:none}
+}
+
+/* Barra de WhatsApp do celular. O build sempre emite; só existe abaixo de
+   48rem, e o motion.js decide quando ela sobe. */
+.barra-zap{
+  position:fixed;left:.75rem;right:.75rem;bottom:max(.75rem, env(safe-area-inset-bottom));z-index:20;
+  transform:translateY(160%);transition:transform .5s var(--ease);
+}
+.barra-zap.on{transform:none}
+.barra-zap .btn{
+  width:100%;justify-content:center;padding-block:1rem;
+  box-shadow:0 12px 30px -12px color-mix(in srgb, var(--ink) 55%, transparent);
+}
+@media (min-width:48.01rem){ .barra-zap{display:none} }
+@media (prefers-reduced-motion:reduce){ .barra-zap{transition:none} }
+
+/* Ícones de saúde (lib/icones-saude.mjs): traço na cor do texto, tamanho
+   pelo contexto. */
+.ico-saude{display:inline-block;width:1.5em;height:1.5em;flex:none;vertical-align:middle}
+
+/* Refração. Tudo deriva de --pulse e --brand; nenhuma cor literal. */
+.luz{display:block;width:100%;height:auto;overflow:visible}
+.luz__feixe,.luz__raio{
+  stroke:var(--pulse);stroke-width:1.5;stroke-linecap:round;
+  vector-effect:non-scaling-stroke;
+}
+.luz__raio{opacity:.42}
+.luz__prisma{
+  fill:color-mix(in srgb, var(--brand) 12%, transparent);
+  stroke:var(--pulse);stroke-width:1.5;stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+
+.luz--hero{height:clamp(120px,18vw,220px)}
+.luz--accent{width:76px;height:34px;display:inline-block;vertical-align:middle}
+
+/* Os raios abrem em leque, um depois do outro. */
+.js .luz--anima .luz__raio{
+  opacity:0;
+  animation:luz-abre .7s var(--ease) forwards;
+  animation-delay:calc(var(--i,0) * 70ms + 400ms);
+}
+@keyframes luz-abre{to{opacity:.42}}
+
+@media (prefers-reduced-motion: reduce){
+  .js .luz--anima .luz__raio{opacity:.42;animation:none}
+}
+
+/* As quatro cores do fundo vivo, só de tokens de marca. Hero claro: fundo da
+   página com manchas claras da marca e do acento; hero escuro: superfície
+   escura com a marca saturada. --vivo-3 é a mancha que segue o dedo. */
+.hero{
+  --vivo-bg:var(--bg);
+  --vivo-1:color-mix(in srgb, var(--pulse) 50%, var(--bg-2));
+  --vivo-2:color-mix(in srgb, var(--brand) 36%, var(--bg-2));
+  --vivo-3:color-mix(in srgb, var(--pulse) 88%, var(--bg-2));
+}
+.hero--tom-escuro{
+  --vivo-bg:var(--surface-dark);
+  --vivo-1:var(--brand);
+  --vivo-2:color-mix(in srgb, var(--brand-2) 70%, var(--pulse));
+  --vivo-3:var(--pulse);
+}
+/* Fora do fluxo e sem eventos: o dedo que rola a página nunca é capturado
+   pelo canvas. Quem escuta o ponteiro é o próprio hero, em modo passivo. */
+.vivo{
+  position:absolute;inset:0;z-index:0;
+  width:100%;height:100%;display:block;pointer-events:none;
+}
+
+.grao{position:absolute;inset:0;pointer-events:none;opacity:.055;mix-blend-mode:multiply}
+.grao--forte{opacity:.11}
+.grao svg{display:block;width:100%;height:100%}
+
+.hd{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd__in{display:flex;align-items:center;gap:var(--sp-3);min-height:4.25rem}
+.hd__marca{font-family:var(--f-display);font-size:1.15rem;text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center}
+.hd__logo{max-height:2.4rem;width:auto}
+.hd__nav{display:none;gap:var(--sp-3);margin-left:auto;font-size:var(--t-sm)}
+.hd__nav a{text-decoration:none;color:var(--ink-soft)}
+.hd__nav a:hover{color:var(--brand)}
+.hd__cta{margin-left:auto;padding:.55rem 1.1rem}
+.hd__nav:not(:empty)~.hd__cta{margin-left:0}
+@media (min-width:56rem){.hd__nav{display:flex}}
+
+/* Sobre hero escuro: o cabeçalho continua o campo do hero. Ao rolar, ganha
+   vidro e sombra (motion.js liga .hd--rolou). */
+.hd{transition:background .3s var(--ease),box-shadow .3s var(--ease)}
+.hd--escuro{background:var(--surface-dark);color:var(--on-dark);border-bottom-color:var(--on-dark-line)}
+.hd--escuro .hd__nav a{color:var(--on-dark-soft)}
+.hd--escuro .hd__nav a:hover{color:var(--on-dark)}
+.hd--escuro .btn--ghost{color:var(--on-dark);border-color:var(--on-dark-line-strong)}
+.hd.hd--rolou{
+  background:color-mix(in srgb, var(--bg) 86%, transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:0 12px 30px -20px color-mix(in srgb, var(--ink) 50%, transparent);
+}
+.hd--escuro.hd--rolou{background:color-mix(in srgb, var(--surface-dark) 86%, transparent)}
+
+/* Selo "aberto agora": bolinha verde quando aberto, apagada quando fechado. */
+.hd__aberto{
+  display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .75rem;border-radius:999px;
+  font-size:.78rem;font-weight:600;white-space:nowrap;
+  background:color-mix(in srgb, currentColor 8%, transparent);border:1px solid var(--line);
+}
+.hd--escuro .hd__aberto{border-color:var(--on-dark-line)}
+.hd__aberto:empty{display:none}
+.hd__aberto::before{content:'';width:.5rem;height:.5rem;border-radius:50%;background:color-mix(in srgb, currentColor 40%, transparent)}
+.hd__aberto--sim::before{background:var(--verde-aberto);box-shadow:0 0 0 0 color-mix(in srgb, var(--verde-aberto) 50%, transparent);animation:pulsa 2s infinite}
+@keyframes pulsa{70%{box-shadow:0 0 0 7px color-mix(in srgb, var(--verde-aberto) 0%, transparent)}100%{box-shadow:0 0 0 0 color-mix(in srgb, var(--verde-aberto) 0%, transparent)}}
+@media (max-width:40rem){.hd__aberto{display:none}}
+@media (prefers-reduced-motion:reduce){.hd__aberto--sim::before{animation:none}}
+
+.hero{position:relative;padding-block:var(--sp-section) 0;overflow:hidden}
+.hero__in{position:relative;z-index:2;max-width:var(--wrap-narrow)}
+.hero--split-motivo .hero__in{max-width:var(--wrap)}
+.hero h1{margin-top:var(--sp-2)}
+.hero .lead{margin-top:var(--sp-3)}
+.hero__acoes{margin-top:var(--sp-4)}
+.hero__acoes .btn .ico{margin-right:-.2rem}
+
+.hero--full-bleed .hero__in{max-width:var(--wrap);text-align:center;margin-inline:auto}
+.hero--full-bleed .hero__acoes{justify-content:center}
+
+/* Campo escuro: o hero se compromete com um fundo saturado, derivado só
+   dos tokens de marca (ver --surface-dark em tokens.css). A opacidade
+   deixa o gradient-mesh, se houver, passar como um véu de cor por trás em
+   vez de ficar tapado — é isso que o faz ler como luminoso, não barrento. */
+.hero--tom-escuro{
+  background:color-mix(in srgb, var(--surface-dark) 80%, transparent);
+  color:var(--on-dark);
+}
+.hero--tom-escuro .lead{color:var(--on-dark-soft)}
+.hero--tom-escuro .eyebrow{color:var(--acento-escuro)}
+.hero--tom-escuro .btn{background:var(--pulse);color:var(--on-pulse)}
+.hero--tom-escuro .btn:hover{background:color-mix(in srgb, var(--pulse) 78%, var(--ink))}
+.hero--tom-escuro .btn--ghost{background:transparent;color:var(--on-dark);border-color:var(--on-dark-line-strong)}
+.hero--tom-escuro .btn--ghost:hover{background:var(--on-dark-line);color:var(--on-dark)}
+
+/* split-motivo de fato divide: conteúdo à esquerda, card de contato
+   opcional à direita. Empilha sozinho abaixo de 64rem porque o card é o
+   segundo item do grid — a ordem do DOM já resolve o mobile. */
+.hero__grid{display:grid;gap:var(--sp-5);align-items:start}
+.hero__conteudo{max-width:var(--wrap-narrow)}
+@media (min-width:64rem){
+  .hero__grid{grid-template-columns:minmax(0,1fr) minmax(18rem,23rem)}
+}
+
+.hero__card{
+  padding:var(--sp-4);border-radius:var(--r-lg);
+  background:var(--surface-dark-2);border:1px solid var(--on-dark-line);
+}
+.hero__card .eyebrow{color:var(--on-dark-dim)}
+.hero__card-titulo{font-family:var(--f-display);font-size:var(--t-h3);margin-top:var(--sp-1);color:var(--on-dark)}
+.hero__card-cta{width:100%;justify-content:center;margin-top:var(--sp-3)}
+.hero__card-lista{margin-top:var(--sp-3);padding-top:var(--sp-3);border-top:1px solid var(--on-dark-line)}
+.hero__card-linha{display:flex;justify-content:space-between;gap:var(--sp-2);font-size:var(--t-sm)}
+.hero__card-linha+.hero__card-linha{margin-top:.5rem}
+.hero__card-linha dt{color:var(--on-dark-dim)}
+.hero__card-linha dd{color:var(--on-dark);font-weight:600;text-align:right}
+
+/* Traçado do motivo: faixa em fluxo normal, em espaço que o próprio hero
+   reserva — nunca mais absoluta sobre o parágrafo e os botões. */
+.hero__arte{
+  position:relative;z-index:1;
+  margin-top:clamp(2.75rem,6vw,4.5rem);
+  padding-block:var(--sp-4);
+  opacity:.85;pointer-events:none;
+}
+.hero--full-bleed .hero__arte{
+  position:absolute;inset:0;z-index:1;display:grid;place-items:center;
+  margin:0;padding:0;opacity:.14;
+}
+
+/* Retrato opcional do hero (data.imagem). Divide a coluna lateral com o card
+   de contato; sem imagem, .hero__lado só contém o card e nada muda. */
+.hero__lado{display:grid;gap:var(--sp-3)}
+.hero__retrato{
+  margin:0;overflow:hidden;border-radius:var(--r-lg);
+  background:var(--bg-2);aspect-ratio:1/1;
+  box-shadow:0 18px 50px -22px color-mix(in srgb, var(--ink) 45%, transparent);
+}
+.hero__retrato img{width:100%;height:100%;object-fit:cover;object-position:38% 28%;display:block}
+@media (min-width:64rem){ .hero__retrato{aspect-ratio:4/5} }
+
+/* Selo giratório (data.selo). */
+.hero__selo{
+  position:absolute;z-index:3;top:calc(var(--sp-section) * .55);right:var(--gutter);
+  width:6.5rem;height:6.5rem;pointer-events:none;
+  animation:selo-gira 22s linear infinite;
+}
+.hero__selo svg{width:100%;height:100%;overflow:visible}
+.hero__selo text{font-family:var(--f-body);font-size:8.6px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;fill:currentColor}
+.hero__selo-miolo{position:absolute;inset:0;display:grid;place-items:center;font-size:1.5rem;color:var(--pulse);animation:selo-gira 22s linear infinite reverse}
+@keyframes selo-gira{to{transform:rotate(360deg)}}
+@media (min-width:64rem){ .hero__selo{width:8.5rem;height:8.5rem} }
+@media (prefers-reduced-motion:reduce){ .hero__selo,.hero__selo-miolo{animation:none} }
+
+/* Fundo estático do hero: o que fica quando o wow do hero não pode rodar
+   (sem WebGL, cena do Spline que falhou). Mesmas cores, sem movimento. */
+.hero--estatico{
+  background:
+    radial-gradient(60% 50% at 85% 15%, color-mix(in srgb, var(--brand) 38%, transparent), transparent 70%),
+    radial-gradient(55% 45% at 10% 95%, color-mix(in srgb, var(--pulse) 26%, transparent), transparent 70%),
+    var(--bg);
+}
+.hero--estatico.hero--tom-escuro{
+  background:
+    radial-gradient(60% 50% at 85% 15%, color-mix(in srgb, var(--brand) 55%, transparent), transparent 70%),
+    radial-gradient(55% 45% at 10% 95%, color-mix(in srgb, var(--pulse) 30%, transparent), transparent 70%),
+    var(--surface-dark);
+}
+
+/* Moldura: a foto num quadro com brilho na cor de acento, flutuando de leve,
+   com a tarja que troca de frase sobreposta na base. */
+.moldura{
+  position:relative;aspect-ratio:4/5;width:min(100%,24rem);justify-self:center;
+  border-radius:1.6rem;padding:.45rem;background:var(--pulse);
+  box-shadow:0 0 0 .55rem color-mix(in srgb, var(--pulse) 18%, transparent),0 40px 80px -30px color-mix(in srgb, var(--pulse) 60%, transparent);
+  animation:moldura-flutua 7s ease-in-out infinite;
+}
+.moldura__foto{position:absolute;inset:.45rem;border-radius:1.2rem}
+.moldura__logo{
+  position:absolute;z-index:3;top:1.1rem;right:1.1rem;width:3rem;height:3rem;border-radius:50%;
+  object-fit:contain;background:var(--bg-2);padding:.35rem;box-shadow:0 6px 18px -8px color-mix(in srgb, var(--ink) 60%, transparent);
+}
+.tarja{
+  position:absolute;z-index:3;left:-1rem;right:1.4rem;bottom:1.6rem;display:flex;align-items:center;gap:.6rem;
+  padding:.7rem .9rem;border-radius:.6rem;background:var(--bg-2);color:var(--ink);font-weight:600;font-size:.95rem;
+  box-shadow:0 18px 40px -18px color-mix(in srgb, var(--ink) 60%, transparent);
+  transition:opacity .38s var(--ease),transform .38s var(--ease);
+}
+.tarja.sai{opacity:0;transform:translateY(8px)}
+.tarja__marca{width:.35rem;align-self:stretch;border-radius:1rem;background:var(--pulse);flex:none}
+.hero--moldura .hero__lado{display:grid;place-items:center;padding-block:var(--sp-3)}
+@keyframes moldura-flutua{50%{transform:translateY(-10px)}}
+@media (min-width:64rem){.hero--moldura .hero__grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:center}}
+/* Título sem palavra solta na primeira linha ("O / neurologista…"). */
+.hero h1{text-wrap:balance}
+@media (prefers-reduced-motion:reduce){.moldura{animation:none}}
+
+.hero--moldura .hero__in{max-width:var(--wrap)}
+
+/* Selo "aberto agora" do celular, acima do título (no desktop fica no cabeçalho). */
+.hero__aberto{margin-bottom:var(--sp-2)}
+.hero--tom-escuro .hero__aberto{border-color:var(--on-dark-line)}
+@media (min-width:40.01rem){.hero .hero__aberto{display:none}}
+@media (max-width:40rem){.hero .hero__aberto:not(:empty){display:inline-flex}}
+
+.fita{position:relative;z-index:2;overflow-x:clip;overflow-y:visible}
+.fita__faixa{background:var(--brand);color:var(--on-brand);padding-block:.9rem;overflow:hidden}
+.fita--inclinada{margin-block:-.6rem}
+.fita--inclinada .fita__faixa{transform:rotate(-2.5deg) scale(1.06)}
+/* No desktop a inclinação vira uma rampa de ~60px que invade o hero: reta. */
+@media (min-width:900px){
+  .fita--inclinada{margin-block:var(--sp-4) 0}
+  .fita--inclinada .fita__faixa{transform:none}
+}
+.fita__trilho{display:flex;width:max-content;animation:fita-corre 32s linear infinite}
+.fita ul{display:flex;list-style:none;margin:0;padding:0}
+.fita li{
+  font-family:var(--f-display);font-size:clamp(1.35rem,1.1rem + 1vw,2rem);line-height:1;
+  white-space:nowrap;padding-inline:1.1rem;display:flex;align-items:center;gap:2.2rem;
+}
+.fita li::after{content:'✦';font-size:.6em;opacity:.7}
+@keyframes fita-corre{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){ .fita__trilho{animation:none} }
+
+/* Nomes (convênios aceitos, parceiros): faixa discreta, reta, no tom da página. */
+.fita--nomes{padding-block:var(--sp-4) var(--sp-3);text-align:center}
+.fita--nomes .fita__titulo{margin-bottom:var(--sp-2)}
+.fita--nomes .fita__faixa{background:transparent;color:var(--ink-soft);border-block:1px solid var(--line)}
+.fita--nomes li{font-family:var(--f-body);font-size:clamp(1rem,.9rem + .5vw,1.3rem);font-weight:600;letter-spacing:.02em}
+.fita--nomes li::after{content:'•';color:var(--pulse)}
+.fita--nomes .fita__trilho{animation-duration:40s}
+
+.nums__lista{list-style:none;padding:0;margin-top:var(--sp-3);display:grid;gap:var(--sp-4)}
+.nums__item{display:flex;flex-direction:column;gap:.15rem}
+.nums__valor{
+  font-family:var(--f-display);line-height:.95;letter-spacing:-.03em;
+  font-size:clamp(2.6rem,1.6rem + 4vw,4.4rem);
+}
+.nums__rotulo{
+  font-size:var(--t-label);letter-spacing:var(--eyebrow-track);
+  text-transform:uppercase;color:var(--ink-dim);
+}
+.nums--faixa .nums__lista{grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr))}
+
+/* O primeiro número ocupa a linha inteira e vira o elemento visual da seção. */
+.nums--gigante .nums__lista{grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr))}
+.nums--gigante .nums__item:first-child{grid-column:1 / -1}
+.nums--gigante .nums__item:first-child .nums__valor{
+  font-size:clamp(4.5rem,2rem + 14vw,13rem);
+  color:var(--brand);
+}
+
+.trat__lista{list-style:none;padding:0;margin-top:var(--sp-4);display:grid;gap:var(--sp-3)}
+.trat__item{
+  padding:var(--sp-3);border:1px solid var(--line);border-radius:var(--r-lg);
+  background:var(--bg-2);display:flex;flex-direction:column;gap:var(--sp-1);
+}
+.trat__nome{letter-spacing:-.01em}
+.trat__desc{color:var(--ink-soft);line-height:var(--lh-body)}
+.trat__metas{margin-top:auto;padding-top:var(--sp-2);display:flex;flex-wrap:wrap;gap:var(--sp-3)}
+.trat__meta{font-size:var(--t-sm);color:var(--ink-soft)}
+.trat__meta-r{
+  display:block;font-size:var(--t-label);letter-spacing:var(--eyebrow-track);
+  text-transform:uppercase;color:var(--ink-dim);
+}
+.trat--cartoes .trat__lista{grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr))}
+.trat--lista .trat__item{border:none;border-top:1px solid var(--line);border-radius:0;background:none;padding-inline:0}
+.trat--lista .trat__lista{gap:0}
+
+/* Pilha: cartões grandes que grudam e empilham na rolagem (data-pilha,
+   motion.js). As cores alternam entre a marca e misturas claras dela; o
+   texto acompanha cada fundo. */
+.trat--pilha .trat__lista{gap:var(--sp-3)}
+.trat--pilha .trat__item{
+  min-height:15.5rem;padding:var(--sp-4) var(--sp-3);justify-content:flex-end;
+  border:0;box-shadow:0 -14px 34px -22px color-mix(in srgb, var(--ink) 45%, transparent);
+}
+.trat--pilha .trat__nome{font-size:clamp(1.6rem,1.3rem + 1.4vw,2.3rem);line-height:1.05}
+.trat--pilha .trat__item:nth-child(4n+1){background:var(--brand);color:var(--on-brand)}
+.trat--pilha .trat__item:nth-child(4n+2){background:color-mix(in srgb, var(--pulse) 30%, var(--bg-2))}
+.trat--pilha .trat__item:nth-child(4n+3){background:color-mix(in srgb, var(--brand) 18%, var(--bg-2))}
+.trat--pilha .trat__item:nth-child(4n+4){background:var(--brand-2);color:var(--on-brand-2)}
+.trat--pilha .trat__item:nth-child(4n+1) :is(.trat__desc,.trat__meta,.trat__meta-r){color:color-mix(in srgb, var(--on-brand) 76%, transparent)}
+.trat--pilha .trat__item:nth-child(4n+4) :is(.trat__desc,.trat__meta,.trat__meta-r){color:color-mix(in srgb, var(--on-brand-2) 76%, transparent)}
+@media (min-width:64rem){
+  .trat--pilha .trat__item{min-height:19rem;padding:var(--sp-5)}
+}
+
+/* Ícone do tratamento: no acento da marca, grande o bastante para virar o
+   desenho do cartão. Na pilha, em cartão escuro, herda a cor do texto. */
+.trat__ico{width:2.6rem;height:2.6rem;color:var(--pulse);margin-bottom:var(--sp-2)}
+.trat--pilha .trat__ico{width:2.6rem;height:2.6rem;color:inherit;opacity:.85}
+@media (min-width:64rem){
+  .trat--pilha .trat__ico{width:3.2rem;height:3.2rem;position:absolute;top:var(--sp-4);right:var(--sp-3);margin:0}
+}
+.trat__item:has(.trat__foto) .trat__ico{display:none}
+.trat--pilha .trat__item{position:relative}
+
+/* Desktop: na pilha, o título fica parado à esquerda enquanto os cartões
+   empilham à direita — a tela inteira trabalha, sem meia página vazia. */
+.trat__cabeca{max-width:var(--wrap-narrow)}
+@media (min-width:64rem){
+  .trat--pilha .trat__in{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:var(--sp-5);align-items:start}
+  .trat--pilha .trat__cabeca{position:sticky;top:7rem}
+  .trat--pilha .trat__lista{margin-top:0}
+}
+
+/* Foto do tratamento: no alto do cartão; na pilha do desktop, ocupa a metade
+   direita do cartão. */
+.trat__foto{aspect-ratio:4/3;margin:calc(var(--sp-3) * -1) calc(var(--sp-3) * -1) var(--sp-2);border-radius:var(--r-lg) var(--r-lg) 0 0}
+.trat--pilha .trat__foto{aspect-ratio:16/9;margin:0 0 var(--sp-2);border-radius:var(--r)}
+@media (min-width:64rem){
+  .trat--pilha .trat__item:has(.trat__foto){padding-right:calc(45% + var(--sp-4))}
+  .trat--pilha .trat__foto{position:absolute;top:0;right:0;bottom:0;width:45%;aspect-ratio:auto;margin:0;border-radius:0 var(--r-lg) var(--r-lg) 0}
+  .trat--pilha .trat__item:has(.trat__foto) .trat__ico{display:none}
+}
+
+/* Motivo da especialidade dentro do cartão, discreto no canto. */
+.trat__acento{position:absolute;right:var(--sp-3);bottom:var(--sp-3);width:4.5rem;opacity:.55;pointer-events:none}
+.trat__acento svg{width:100%;height:auto;display:block}
+.trat__item{position:relative}
+.trat__item:has(.trat__foto) .trat__acento{display:none}
+
+.trat--lista .trat__foto{margin-inline:0;border-radius:var(--r)}
+
+.conversa__in{display:grid;gap:var(--sp-5);align-items:center}
+.conversa__acao{margin-top:var(--sp-4)}
+@media (min-width:64rem){.conversa__in{grid-template-columns:minmax(0,1fr) minmax(0,.9fr)}}
+
+/* O celular: moldura escura, cabeçalho de conversa, fundo de chat. */
+.celular{
+  justify-self:center;width:min(100%,22rem);border-radius:2.2rem;padding:.6rem;
+  background:var(--ink);box-shadow:0 40px 80px -40px color-mix(in srgb, var(--ink) 70%, transparent);
+}
+.celular__topo{
+  display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;border-radius:1.7rem 1.7rem 0 0;
+  background:var(--brand-2);color:var(--on-brand-2);
+}
+.celular__avatar{width:2.3rem;height:2.3rem;border-radius:50%;object-fit:contain;background:var(--bg-2);flex:none}
+.celular__avatar--mono{display:grid;place-items:center;font-family:var(--f-display);color:var(--brand)}
+.celular__quem{display:flex;flex-direction:column;line-height:1.15}
+.celular__nome{font-weight:600;font-size:.95rem}
+.celular__status{font-size:.75rem;opacity:.75}
+.celular__msgs{
+  list-style:none;margin:0;padding:1rem .8rem 1.4rem;min-height:19rem;display:flex;flex-direction:column;gap:.55rem;
+  background:color-mix(in srgb, var(--bg) 92%, var(--brand) 8%);border-radius:0 0 1.7rem 1.7rem;
+}
+.msg{max-width:82%;padding:.6rem .8rem;border-radius:1rem;font-size:.92rem;line-height:1.4;box-shadow:0 1px 1px color-mix(in srgb, var(--ink) 12%, transparent)}
+.msg--paciente{align-self:flex-end;background:color-mix(in srgb, var(--pulse) 22%, var(--bg-2));color:var(--ink);border-bottom-right-radius:.3rem}
+.msg--clinica{align-self:flex-start;background:var(--bg-2);color:var(--ink);border-bottom-left-radius:.3rem}
+.js [data-conversa] .msg{opacity:0;transform:translateY(8px) scale(.97);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.js [data-conversa] .msg.on{opacity:1;transform:none}
+.celular{position:relative}
+.celular__digitando{
+  position:absolute;left:1.4rem;bottom:1.4rem;display:flex;gap:.25rem;padding:.55rem .7rem;border-radius:1rem;
+  background:var(--bg-2);opacity:0;transition:opacity .25s;
+}
+.celular__digitando.on{opacity:1}
+.celular__digitando span{width:.4rem;height:.4rem;border-radius:50%;background:var(--ink-dim);animation:digita 1s infinite}
+.celular__digitando span:nth-child(2){animation-delay:.15s}
+.celular__digitando span:nth-child(3){animation-delay:.3s}
+@keyframes digita{50%{transform:translateY(-3px);opacity:.5}}
+
+.passo__lista{list-style:none;padding:0;margin-top:var(--sp-4);display:grid;gap:var(--sp-4);counter-reset:passo}
+.passo__item{position:relative;padding-left:3.4rem}
+.passo__item::before{
+  content:attr(data-passo);
+  position:absolute;left:0;top:0;
+  display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;
+  border:1px solid var(--line-strong);
+  font-family:var(--f-display);color:var(--brand-2);
+}
+.passo__texto{color:var(--ink-soft);line-height:var(--lh-body);margin-top:.25rem}
+.passo--timeline .passo__item:not(:last-child)::after{
+  content:'';position:absolute;left:1.2rem;top:2.6rem;bottom:calc(var(--sp-4) * -1);
+  width:1px;background:var(--line);
+}
+.passo--numerados .passo__lista{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+.passo--numerados .passo__item::after{display:none}
+
+/* Passo com ícone: o ícone ocupa o círculo do número. */
+.passo__item--ico::before{content:''}
+.passo__ico{position:absolute;left:.55rem;top:.55rem;width:1.3rem;height:1.3rem;color:var(--brand)}
+
+/* Desktop: a linha do tempo deita — passos lado a lado, ligados por um fio. */
+@media (min-width:64rem){
+  .passo--timeline .passo__lista{grid-auto-flow:column;grid-auto-columns:1fr;gap:var(--sp-4)}
+  .passo--timeline .passo__item{padding-left:0;padding-top:3.6rem}
+  .passo--timeline .passo__item:not(:last-child)::after{
+    left:3rem;right:calc(var(--sp-4) * -1 + .4rem);top:1.2rem;bottom:auto;width:auto;height:1px;
+  }
+}
+
+.faq__lista{margin-top:var(--sp-4);display:grid;gap:0}
+.faq__item{border-top:1px solid var(--line)}
+.faq__item:last-child{border-bottom:1px solid var(--line)}
+.faq__p{
+  cursor:pointer;list-style:none;padding-block:var(--sp-3);
+  font-family:var(--f-display);font-size:var(--t-h3);
+  display:flex;justify-content:space-between;gap:var(--sp-2);align-items:baseline;
+}
+.faq__p::-webkit-details-marker{display:none}
+.faq__p::after{content:'+';color:var(--pulse);font-size:1.4em;line-height:1}
+.faq__item[open] .faq__p::after{content:'–'}
+.faq__r{padding-bottom:var(--sp-3);color:var(--ink-soft);line-height:var(--lh-body);max-width:60ch}
+.faq--colunas .faq__lista{
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));
+  column-gap:var(--sp-4);
+}
+
+/* Desktop: título e convite para perguntar à esquerda, parados; perguntas à
+   direita. */
+.faq__in{max-width:var(--wrap)}
+.faq__outra{margin-top:var(--sp-3)}
+@media (min-width:64rem){
+  .faq__in{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--sp-5);align-items:start}
+  .faq__cabeca{position:sticky;top:7rem}
+  .faq__in .faq__lista{margin-top:0}
+}
+
+.unid__lista{list-style:none;padding:0;margin-top:var(--sp-4);display:grid;gap:var(--sp-3)}
+.unid__item{padding:var(--sp-3);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--bg-2)}
+.unid__bairro{margin-bottom:var(--sp-2)}
+.unid__dados{display:grid;gap:.35rem}
+.unid__linha{display:flex;gap:var(--sp-2);justify-content:space-between;align-items:baseline}
+.unid__linha dt{
+  font-size:var(--t-label);letter-spacing:var(--eyebrow-track);
+  text-transform:uppercase;color:var(--ink-dim);flex:none;
+}
+.unid__linha dd{text-align:right;color:var(--ink-soft)}
+.unid__cta{margin-top:var(--sp-4)}
+.unid--cartoes .unid__lista{grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr))}
+.unid--unica .unid__lista{max-width:var(--wrap-narrow)}
+
+/* Unidade única: cartão e painel lado a lado no desktop. O painel é a foto da
+   fachada ou, sem foto, um campo de marca com o bairro em corpo grande. */
+.unid__grade{display:grid;gap:var(--sp-3);margin-top:var(--sp-4)}
+.unid__grade .unid__lista{margin-top:0}
+.unid--unica .unid__lista{max-width:none}
+.unid__painel{
+  position:relative;overflow:hidden;border-radius:var(--r-lg);min-height:14rem;
+  background:var(--brand-2);color:var(--on-brand-2);padding:var(--sp-4);
+  display:flex;flex-direction:column;justify-content:flex-end;gap:var(--sp-2);
+}
+.unid__painel--foto{padding:0;background:var(--bg-2)}
+.unid__foto{position:absolute;inset:0;border-radius:inherit}
+.unid__ico{width:2.4rem;height:2.4rem;color:var(--acento-escuro)}
+.unid__lugar{font-family:var(--f-display);font-size:clamp(2rem,1.4rem + 2.4vw,3.4rem);line-height:1}
+.unid__acento{position:absolute;top:var(--sp-3);right:var(--sp-3);width:6rem;opacity:.5}
+.unid__acento svg{width:100%;height:auto;display:block}
+@media (min-width:64rem){
+  .unid--unica .unid__grade{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch}
+  .unid__painel{min-height:20rem}
+}
+
+.cta{padding-block:var(--sp-4) var(--sp-5);text-align:center}
+.cta .eyebrow{justify-content:center}
+.cta .lead{margin-inline:auto;margin-top:var(--sp-2)}
+.cta__acao{margin-top:var(--sp-4)}
+.cta .btn .ico{margin-right:-.2rem}
+
+.cta--bloco-cheio{padding-block:var(--sp-5);background:var(--brand);color:var(--on-brand)}
+.cta--bloco-cheio .lead{color:inherit;opacity:.82}
+.cta--bloco-cheio .btn{background:var(--on-brand);color:var(--brand)}
+.cta--bloco-cheio .btn:hover{background:var(--on-brand);color:var(--brand-2)}
+
+.cta--faixa{background:var(--bg-2);border-block:1px solid var(--line)}
+
+.rodape{border-top:1px solid var(--line);padding-block:var(--sp-5) var(--sp-4);background:var(--bg-2)}
+.rodape__in{display:flex;flex-direction:column;gap:var(--sp-2)}
+.rodape__marca{font-family:var(--f-display);font-size:var(--t-h3)}
+.rodape__nav{display:flex;flex-wrap:wrap;gap:var(--sp-3);font-size:var(--t-sm)}
+.rodape__nav a{color:var(--ink-soft);text-decoration:none}
+.rodape__nav a:hover{color:var(--brand)}
+.rodape__aviso{max-width:64ch;color:var(--ink-dim)}
+.rodape__autoria{
+  margin-top:var(--sp-2);font-size:var(--t-label);letter-spacing:var(--eyebrow-track);
+  text-transform:uppercase;color:var(--ink-dim);
+}
+@media (min-width:56rem){
+  .rodape--assinatura .rodape__in{flex-direction:row;align-items:baseline;justify-content:space-between}
+  .rodape--assinatura .rodape__autoria{margin-top:0}
+}
+
+:root{--brand:#7a5546;--brand-2:#4a332b;--ink:#2a201c;--bg:#f7f2ee;--r:6px;--f-display:'Bodoni Moda',Georgia,serif;--f-body:'Jost',system-ui,sans-serif;--pulse:#c9a07e;--on-brand:#FFFFFF;--on-brand-2:#FFFFFF;--on-pulse:#111111;--acento-escuro:#c9a07e}</style>
+</head>
+<body class="no-js">
+
+<header class="hd hd--sticky-cta">
+  <div class="wrap hd__in">
+    <a class="hd__marca" href="#topo">Dra. Tati Panato</a>
+    <nav class="hd__nav"><a href="#endolift">Endolift</a><a href="#tratamentos">Tratamentos</a><a href="#trajetoria">Trajetória</a><a href="#unidades">Onde estamos</a></nav>
+    <span class="hd__aberto" data-funcionamento="{&quot;seg&quot;:&quot;10:00-19:00&quot;,&quot;ter&quot;:&quot;10:00-19:00&quot;,&quot;qua&quot;:&quot;10:00-19:00&quot;,&quot;qui&quot;:&quot;10:00-19:00&quot;,&quot;sex&quot;:&quot;10:00-19:00&quot;,&quot;sab&quot;:null,&quot;dom&quot;:null}" aria-live="polite"></span>
+    <a class="btn btn--ghost hd__cta" href="https://wa.me/5531993345014?text=Ol%C3%A1!%20Vim%20pelo%20site.">WhatsApp</a>
+  </div>
+</header>
+<section class="hero hero--split-motivo hero--tom-claro" id="topo">
+  <canvas class="vivo" aria-hidden="true"></canvas>
+  <div class="grao" aria-hidden="true">
+  <svg width="100%" height="100%" focusable="false">
+    <filter id="grao-f-1"><feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#grao-f-1)"/>
+  </svg>
+</div>
+  <div class="hero__selo" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="hero-selo-circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#hero-selo-circ">Endolift BH · desde 2021 · </textPath></text></svg><span class="hero__selo-miolo">✦</span></div>
+  <div class="wrap hero__in">
+    <div class="hero__grid"><div class="hero__conteudo">
+    <p class="eyebrow" data-reveal>Endolift e estética facial · Funcionários, BH</p><p class="hero__aberto hd__aberto" aria-hidden="true"></p>
+    <h1 data-reveal data-palavras style="--d:60ms">Papada e contorno do rosto, sem cirurgia</h1>
+    <p class="lead" data-reveal style="--d:120ms">Endolift, toxina botulínica, preenchimento e fios de PDO, indicados por uma farmacêutica esteta que olha primeiro para o seu histórico e só depois para o procedimento.</p>
+    <div class="cluster hero__acoes" data-reveal style="--d:200ms">
+      <a class="btn" href="https://wa.me/5531993345014?text=Ol%C3%A1!%20Vim%20pelo%20site."><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Agendar avaliação</a>
+      <a class="btn btn--ghost" href="#endolift">Como o Endolift funciona</a>
+    </div>
+  </div><div class="hero__lado"><aside class="hero__card" data-reveal style="--d:280ms" data-tilt data-glow>
+    <p class="eyebrow">Agendamento</p>
+    <p class="hero__card-titulo">Fale com a clínica</p>
+    <a class="btn hero__card-cta" href="https://wa.me/5531993345014?text=Ol%C3%A1!%20Vim%20pelo%20site."><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Chamar no WhatsApp</a>
+    <dl class="hero__card-lista"><div class="hero__card-linha"><dt>Telefone</dt><dd>(31) 99334-5014 · WhatsApp</dd></div><div class="hero__card-linha"><dt>Endereço</dt><dd>Funcionários · Belo Horizonte/MG</dd></div></dl>
+  </aside></div></div>
+  </div>
+  <div class="hero__arte" data-parallax="0.08"><svg class="luz luz--hero luz--anima" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet" role="presentation" aria-hidden="true" focusable="false"><line class="luz__feixe" x1="0" y1="100" x2="84" y2="100"/><path class="luz__prisma" d="M 120 56 L 156 100 L 120 144 L 84 100 Z"/><line class="luz__raio" style="--i:0" x1="120" y1="100" x2="366.7" y2="-4.7"/><line class="luz__raio" style="--i:1" x1="120" y1="100" x2="375.9" y2="20.5"/><line class="luz__raio" style="--i:2" x1="120" y1="100" x2="382.6" y2="46.6"/><line class="luz__raio" style="--i:3" x1="120" y1="100" x2="386.7" y2="73.1"/><line class="luz__raio" style="--i:4" x1="120" y1="100" x2="388.0" y2="100.0"/><line class="luz__raio" style="--i:5" x1="120" y1="100" x2="386.7" y2="126.9"/><line class="luz__raio" style="--i:6" x1="120" y1="100" x2="382.6" y2="153.4"/><line class="luz__raio" style="--i:7" x1="120" y1="100" x2="375.9" y2="179.5"/><line class="luz__raio" style="--i:8" x1="120" y1="100" x2="366.7" y2="204.7"/></svg></div>
+</section>
+<div class="fita fita--inclinada" aria-hidden="true">
+  <div class="fita__faixa"><div class="fita__trilho"><ul><li>Endolift</li><li>Endolaser</li><li>Toxina botulínica</li><li>Preenchimento facial</li><li>Fios de PDO</li><li>Papada</li><li>Contorno mandibular</li></ul><ul><li>Endolift</li><li>Endolaser</li><li>Toxina botulínica</li><li>Preenchimento facial</li><li>Fios de PDO</li><li>Papada</li><li>Contorno mandibular</li></ul></div></div>
+</div>
+<section class="blk-endo" id="endolift">
+  <div class="blk-endo__in">
+    <div class="blk-endo__texto" data-reveal>
+      <p class="blk-endo__eyebrow">A especialidade da casa</p>
+      <h2 class="blk-endo__h2">Endolift: o laser trabalha por baixo da pele</h2>
+      <p class="blk-endo__p" data-acende>Uma fibra ótica mais fina que um fio de cabelo entra por um pertuito mínimo, sem corte e sem pontos, e leva a energia do laser direto à camada onde estão a gordura localizada e a pele que perdeu firmeza. Por fora, quase nada a mostrar; por dentro, o colágeno volta a trabalhar nos meses seguintes.</p>
+      <ul class="blk-endo__areas">
+        <li><svg class="ico-saude" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8.6 14.6s1.3 1.6 3.4 1.6 3.4-1.6 3.4-1.6M9 9.6h.01M15 9.6h.01"/></svg> Papada e linha da mandíbula</li>
+        <li><svg class="ico-saude" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7.5c3-2 6 2 9 0s6-2 9 0M3 12.5c3-2 6 2 9 0s6-2 9 0M3 17.5c3-2 6 2 9 0s6-2 9 0"/></svg> Flacidez do terço inferior do rosto</li>
+        <li><svg class="ico-saude" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2.4"/><path d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4M5.3 5.3l2.8 2.8M15.9 15.9l2.8 2.8M18.7 5.3l-2.8 2.8M8.1 15.9l-2.8 2.8"/></svg> Pescoço e contorno</li>
+      </ul>
+    </div>
+    <figure class="blk-endo__corte" aria-hidden="true" data-reveal style="--d:140ms">
+      <div class="blk-endo__cam blk-endo__cam--epi"><span>Pele</span></div>
+      <div class="blk-endo__cam blk-endo__cam--der"><span>Derme · colágeno</span></div>
+      <div class="blk-endo__cam blk-endo__cam--gor"><span>Gordura localizada</span></div>
+      <div class="blk-endo__fibra"><i></i></div>
+      <figcaption class="blk-endo__leg">Esquema ilustrativo · a fibra percorre a camada sob a pele</figcaption>
+    </figure>
+  </div>
+</section>
+<style>
+.blk-endo { padding: clamp(64px, 12vw, 128px) 20px; background: var(--bg); color: var(--ink); }
+.blk-endo__in { max-width: 1120px; margin: 0 auto; display: grid; gap: 44px; }
+.blk-endo__eyebrow { margin: 0 0 12px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--brand); }
+.blk-endo__h2 { margin: 0 0 20px; font-family: var(--f-display); font-weight: 400; font-size: clamp(32px, 7vw, 54px); line-height: 1.06; text-wrap: balance; }
+.blk-endo__p { margin: 0 0 28px; font-size: 17px; line-height: 1.65; max-width: 48ch; }
+.blk-endo__areas { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.blk-endo__areas li { display: flex; gap: 12px; align-items: center; font-size: 16px; }
+.blk-endo__areas svg { width: 22px; height: 22px; flex: none; color: var(--brand); }
+.blk-endo__corte { position: relative; margin: 0; border-radius: var(--r); overflow: hidden; display: grid; grid-template-rows: 18% 32% 50%; aspect-ratio: 4 / 3.4; box-shadow: 0 30px 70px -40px color-mix(in srgb, var(--ink) 60%, transparent); }
+.blk-endo__cam { position: relative; display: flex; align-items: flex-start; justify-content: flex-end; padding: 10px 14px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.blk-endo__cam--epi { background: color-mix(in srgb, var(--pulse, var(--brand)) 55%, var(--bg)); }
+.blk-endo__cam--der { background: color-mix(in srgb, var(--pulse, var(--brand)) 32%, var(--bg)); background-image: repeating-linear-gradient(100deg, transparent 0 14px, color-mix(in srgb, var(--brand) 14%, transparent) 14px 15px); }
+.blk-endo__cam--gor { background: color-mix(in srgb, var(--pulse, var(--brand)) 14%, var(--bg)); background-image: radial-gradient(circle at 20% 40%, color-mix(in srgb, var(--brand) 10%, transparent) 0 22px, transparent 23px), radial-gradient(circle at 55% 70%, color-mix(in srgb, var(--brand) 10%, transparent) 0 28px, transparent 29px), radial-gradient(circle at 85% 35%, color-mix(in srgb, var(--brand) 10%, transparent) 0 20px, transparent 21px); }
+.blk-endo__cam span { opacity: .7; }
+.blk-endo__fibra { position: absolute; left: -4%; top: 56%; width: 92%; height: 3px; transform: rotate(-6deg); transform-origin: left center; background: color-mix(in srgb, var(--ink) 70%, transparent); border-radius: 3px; }
+.blk-endo__fibra i { position: absolute; right: -6px; top: 50%; width: 16px; height: 16px; margin-top: -8px; border-radius: 50%; background: var(--pulse, var(--brand)); box-shadow: 0 0 0 6px color-mix(in srgb, var(--pulse, var(--brand)) 35%, transparent), 0 0 40px 18px color-mix(in srgb, var(--pulse, var(--brand)) 55%, transparent); animation: blkEndoPulso 2.4s ease-in-out infinite; }
+@keyframes blkEndoPulso { 50% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--pulse, var(--brand)) 20%, transparent), 0 0 60px 26px color-mix(in srgb, var(--pulse, var(--brand)) 40%, transparent); } }
+.blk-endo__leg { position: absolute; left: 14px; bottom: 10px; font-size: 11px; opacity: .6; }
+@media (prefers-reduced-motion: reduce) { .blk-endo__fibra i { animation: none; } }
+@media (min-width: 900px) {
+  .blk-endo__in { grid-template-columns: 1fr 1fr; align-items: center; column-gap: 80px; }
+}
+</style>
+
+<section class="nums nums--vivo section" id="numeros" data-vivo><canvas class="vivo" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Antes de agendar, os números</p>
+    <ul class="nums__lista"><li class="nums__item" data-reveal style="--d:0ms">
+      <span class="nums__valor">4,9</span>
+      <span class="nums__rotulo">Nota no Google Maps</span>
+    </li><li class="nums__item" data-reveal style="--d:90ms">
+      <span class="nums__valor" data-count="93">93</span>
+      <span class="nums__rotulo">Avaliações públicas de pacientes</span>
+    </li><li class="nums__item" data-reveal style="--d:180ms">
+      <span class="nums__valor" data-count="2021">2021</span>
+      <span class="nums__rotulo">Ano em que o consultório abriu no Funcionários</span>
+    </li></ul>
+  </div>
+</section>
+<section class="trat trat--pilha section" id="tratamentos">
+  <div class="wrap trat__in">
+    <div class="trat__cabeca"><h2 data-reveal>Tratamentos</h2><p class="lead" data-reveal style="--d:80ms">Procedimentos não cirúrgicos para o rosto. A indicação sai da avaliação, não da lista.</p></div>
+    <ul class="trat__lista" data-pilha><li class="trat__item">
+      <svg class="ico-saude trat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2.4"/><path d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4M5.3 5.3l2.8 2.8M15.9 15.9l2.8 2.8M18.7 5.3l-2.8 2.8M8.1 15.9l-2.8 2.8"/></svg><span class="trat__acento"><svg class="luz luz--accent" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet" role="presentation" aria-hidden="true" focusable="false"><path class="luz__prisma" d="M 120 56 L 156 100 L 120 144 L 84 100 Z"/><line class="luz__raio" style="--i:0" x1="120" y1="100" x2="208.4" y2="62.5"/><line class="luz__raio" style="--i:1" x1="120" y1="100" x2="216.0" y2="100.0"/><line class="luz__raio" style="--i:2" x1="120" y1="100" x2="208.4" y2="137.5"/></svg></span>
+      <h3 class="trat__nome">Endolift</h3>
+      <p class="trat__desc">Laser aplicado por uma fibra fina sob a pele, sem corte. Trata papada, contorno da mandíbula e flacidez, e o resultado continua a se formar nos meses seguintes.</p>
+      
+    </li><li class="trat__item">
+      <svg class="ico-saude trat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7.5c3-2 6 2 9 0s6-2 9 0M3 12.5c3-2 6 2 9 0s6-2 9 0M3 17.5c3-2 6 2 9 0s6-2 9 0"/></svg><span class="trat__acento"><svg class="luz luz--accent" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet" role="presentation" aria-hidden="true" focusable="false"><path class="luz__prisma" d="M 120 56 L 156 100 L 120 144 L 84 100 Z"/><line class="luz__raio" style="--i:0" x1="120" y1="100" x2="208.4" y2="62.5"/><line class="luz__raio" style="--i:1" x1="120" y1="100" x2="216.0" y2="100.0"/><line class="luz__raio" style="--i:2" x1="120" y1="100" x2="208.4" y2="137.5"/></svg></span>
+      <h3 class="trat__nome">Endolaser</h3>
+      <p class="trat__desc">A mesma tecnologia de fibra levada a outras regiões com gordura localizada e pele frouxa, planejada caso a caso.</p>
+      
+    </li><li class="trat__item">
+      <svg class="ico-saude trat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 2.5l3.5 3.5M19.8 4.2L9 15M14.3 5.5l4.2 4.2M9 15l-2.2 2.2M6.8 17.2l-3.3 3.3M11.2 8.6l1.8 1.8M8.6 11.2l1.8 1.8"/></svg><span class="trat__acento"><svg class="luz luz--accent" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet" role="presentation" aria-hidden="true" focusable="false"><path class="luz__prisma" d="M 120 56 L 156 100 L 120 144 L 84 100 Z"/><line class="luz__raio" style="--i:0" x1="120" y1="100" x2="208.4" y2="62.5"/><line class="luz__raio" style="--i:1" x1="120" y1="100" x2="216.0" y2="100.0"/><line class="luz__raio" style="--i:2" x1="120" y1="100" x2="208.4" y2="137.5"/></svg></span>
+      <h3 class="trat__nome">Toxina botulínica</h3>
+      <p class="trat__desc">Suaviza as linhas de expressão da testa, da glabela e dos olhos, na dose que mantém o rosto com movimento.</p>
+      
+    </li><li class="trat__item">
+      <svg class="ico-saude trat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3s6.2 6.6 6.2 11.2a6.2 6.2 0 0 1-12.4 0C5.8 9.6 12 3 12 3z"/></svg><span class="trat__acento"><svg class="luz luz--accent" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet" role="presentation" aria-hidden="true" focusable="false"><path class="luz__prisma" d="M 120 56 L 156 100 L 120 144 L 84 100 Z"/><line class="luz__raio" style="--i:0" x1="120" y1="100" x2="208.4" y2="62.5"/><line class="luz__raio" style="--i:1" x1="120" y1="100" x2="216.0" y2="100.0"/><line class="luz__raio" style="--i:2" x1="120" y1="100" x2="208.4" y2="137.5"/></svg></span>
+      <h3 class="trat__nome">Preenchimento facial</h3>
+      <p class="trat__desc">Ácido hialurônico para devolver volume e definir contorno onde o rosto perdeu estrutura, respeitando a sua proporção.</p>
+      
+    </li><li class="trat__item">
+      <svg class="ico-saude trat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8.6 14.6s1.3 1.6 3.4 1.6 3.4-1.6 3.4-1.6M9 9.6h.01M15 9.6h.01"/></svg><span class="trat__acento"><svg class="luz luz--accent" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet" role="presentation" aria-hidden="true" focusable="false"><path class="luz__prisma" d="M 120 56 L 156 100 L 120 144 L 84 100 Z"/><line class="luz__raio" style="--i:0" x1="120" y1="100" x2="208.4" y2="62.5"/><line class="luz__raio" style="--i:1" x1="120" y1="100" x2="216.0" y2="100.0"/><line class="luz__raio" style="--i:2" x1="120" y1="100" x2="208.4" y2="137.5"/></svg></span>
+      <h3 class="trat__nome">Fios de PDO</h3>
+      <p class="trat__desc">Fios absorvíveis que dão sustentação à pele e estimulam colágeno ao longo do caminho em que são posicionados.</p>
+      
+    </li></ul>
+  </div>
+</section>
+<section class="conversa conversa--celular section" id="conversa">
+  <div class="wrap conversa__in">
+    <div class="conversa__texto">
+      <p class="eyebrow" data-reveal>Pelo WhatsApp</p><h2 data-reveal>A dúvida que quase todo mundo manda primeiro</h2><p class="lead" data-reveal>Respostas diretas, de segunda a sexta. A avaliação é marcada pela mesma conversa.</p>
+      <p class="conversa__acao" data-reveal><a class="btn" href="https://wa.me/5531993345014?text=Ol%C3%A1!%20Vim%20pelo%20site."><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Mandar a minha dúvida</a></p>
+    </div>
+    <div class="celular" data-reveal style="--d:120ms">
+      <div class="celular__topo"><span class="celular__avatar celular__avatar--mono" aria-hidden="true">D</span><span class="celular__quem"><span class="celular__nome">Dra. Tati Panato</span><span class="celular__status" data-conversa-status>online</span></span></div>
+      <ol class="celular__msgs" data-conversa><li class="msg msg--paciente">Oi! O Endolift resolve papada? Tenho medo de ficar marcada.</li><li class="msg msg--clinica">Oi! Resolve em muitos casos, sim. É feito sem corte: só um pontinho de entrada para a fibra, que some em poucos dias.</li><li class="msg msg--paciente">E dá para voltar a trabalhar no dia seguinte?</li><li class="msg msg--clinica">A maioria volta, com um pouco de inchaço. Na avaliação a Dra. Tati vê se o seu caso é para Endolift ou para outro tratamento. Quer um horário esta semana?</li></ol>
+      <div class="celular__digitando" data-digitando aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</section>
+<section class="passo passo--timeline section" id="como-funciona">
+  <div class="wrap">
+    <h2 data-reveal>Do primeiro contato ao retorno</h2>
+    
+    <ol class="passo__lista"><li class="passo__item passo__item--ico" data-passo="1" data-reveal style="--d:0ms">
+      <svg class="ico-saude passo__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l1.9-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>
+      <h3 class="passo__titulo">Conversa pelo WhatsApp</h3>
+      <p class="passo__texto">Você conta o que te incomoda e marca a avaliação.</p>
+    </li><li class="passo__item passo__item--ico" data-passo="2" data-reveal style="--d:80ms">
+      <svg class="ico-saude passo__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12.5l4.8 4.8L19.5 7"/></svg>
+      <h3 class="passo__titulo">Avaliação</h3>
+      <p class="passo__texto">Histórico, medicamentos em uso e procedimentos anteriores, antes de qualquer indicação.</p>
+    </li><li class="passo__item passo__item--ico" data-passo="3" data-reveal style="--d:160ms">
+      <svg class="ico-saude passo__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2.4"/><path d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4M5.3 5.3l2.8 2.8M15.9 15.9l2.8 2.8M18.7 5.3l-2.8 2.8M8.1 15.9l-2.8 2.8"/></svg>
+      <h3 class="passo__titulo">Procedimento</h3>
+      <p class="passo__texto">No consultório, no Funcionários, com anestesia local quando o tratamento pede.</p>
+    </li><li class="passo__item passo__item--ico" data-passo="4" data-reveal style="--d:240ms">
+      <svg class="ico-saude passo__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6.5h16v14H4zM4 10.5h16M8.5 3.5v5M15.5 3.5v5M8 14.5h2M14 14.5h2M8 17.5h2"/></svg>
+      <h3 class="passo__titulo">Retorno</h3>
+      <p class="passo__texto">Acompanhamento do resultado nas semanas seguintes e o próximo passo, se houver.</p>
+    </li></ol>
+  </div>
+</section>
+<section class="blk-traj" id="trajetoria">
+  <div class="blk-traj__in">
+    <header class="blk-traj__cab" data-reveal>
+      <p class="blk-traj__eyebrow">De onde vem o cuidado</p>
+      <h2 class="blk-traj__h2">Dez anos de farmácia antes do primeiro laser</h2>
+      <p class="blk-traj__lead" data-acende>A Dra. Tati Panato chegou à estética depois de uma década como farmacêutica responsável técnica. É dali que vem o hábito de perguntar o que você usa, o que já fez e o que pode interagir, antes de indicar qualquer procedimento.</p>
+    </header>
+    <ol class="blk-traj__linha" data-pilha>
+      <li class="blk-traj__item">
+        <span class="blk-traj__ano">~10 anos</span>
+        <span class="blk-traj__t">Farmacêutica responsável técnica</span>
+        <span class="blk-traj__d">Em grandes redes de farmácia: medicamento, dose, interação e orientação ao paciente, todos os dias.</span>
+      </li>
+      <li class="blk-traj__item">
+        <span class="blk-traj__ano">Especialização</span>
+        <span class="blk-traj__t">Estética avançada pela FUMEC</span>
+        <span class="blk-traj__d">A formação que levou a farmácia para o rosto: toxina, preenchimento, fios e laser.</span>
+      </li>
+      <li class="blk-traj__item">
+        <span class="blk-traj__ano">Jul 2021</span>
+        <span class="blk-traj__t">Consultório próprio em BH</span>
+        <span class="blk-traj__d">No Centro Comercial Getúlio Vargas, no Funcionários.</span>
+      </li>
+      <li class="blk-traj__item blk-traj__item--hoje">
+        <span class="blk-traj__ano">Hoje</span>
+        <span class="blk-traj__t">Endolift como especialidade</span>
+        <span class="blk-traj__d">Um protocolo próprio para papada, contorno e flacidez do rosto, sem cirurgia.</span>
+      </li>
+    </ol>
+  </div>
+</section>
+<style>
+.blk-traj { padding: clamp(64px, 12vw, 128px) 20px; background: color-mix(in srgb, var(--brand) 5%, var(--bg)); color: var(--ink); }
+.blk-traj__in { max-width: 1120px; margin: 0 auto; display: grid; gap: 40px; }
+.blk-traj__eyebrow { margin: 0 0 12px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--brand); }
+.blk-traj__h2 { margin: 0 0 20px; font-family: var(--f-display); font-weight: 400; font-size: clamp(32px, 7vw, 54px); line-height: 1.06; text-wrap: balance; }
+.blk-traj__lead { margin: 0; font-size: 17px; line-height: 1.65; max-width: 46ch; }
+.blk-traj__linha { list-style: none; margin: 0; padding: 0 0 0 26px; display: grid; gap: 14px; position: relative; }
+.blk-traj__linha::before { content: ""; position: absolute; left: 6px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(var(--brand), var(--pulse, var(--brand))); border-radius: 2px; }
+.blk-traj__item { position: relative; display: grid; gap: 4px; padding: 18px 20px; border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent); border-radius: var(--r); background: var(--bg); }
+.blk-traj__item::before { content: ""; position: absolute; left: -26px; top: 24px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--brand); }
+.blk-traj__item--hoje::before { background: var(--pulse, var(--brand)); border-color: var(--pulse, var(--brand)); box-shadow: 0 0 0 6px color-mix(in srgb, var(--pulse, var(--brand)) 25%, transparent); }
+.blk-traj__ano { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--brand); }
+.blk-traj__t { font-family: var(--f-display); font-size: 24px; line-height: 1.15; }
+.blk-traj__d { font-size: 15px; line-height: 1.55; opacity: .78; }
+@media (min-width: 900px) {
+  .blk-traj__in { grid-template-columns: 5fr 6fr; align-items: start; column-gap: 72px; }
+  .blk-traj__cab { position: sticky; top: 120px; }
+}
+</style>
+
+<section class="faq faq--colunas section" id="faq">
+  <div class="wrap faq__in">
+    <div class="faq__cabeca"><h2 data-reveal>Perguntas frequentes</h2><p class="faq__outra" data-reveal><a class="btn btn--ghost" href="https://wa.me/5531993345014?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida.">Outra dúvida? Pergunte no WhatsApp</a></p></div>
+    <div class="faq__lista"><details class="faq__item" data-reveal style="--d:0ms">
+      <summary class="faq__p">O Endolift dói?</summary>
+      <div class="faq__r">É feito com anestesia local na região tratada. A maioria das pacientes descreve um incômodo leve e calor durante a aplicação.</div>
+    </details><details class="faq__item" data-reveal style="--d:50ms">
+      <summary class="faq__p">Fica marca?</summary>
+      <div class="faq__r">A fibra entra por um ponto mínimo, sem corte e sem pontos. Pode haver inchaço e pequenos roxos nos primeiros dias.</div>
+    </details><details class="faq__item" data-reveal style="--d:100ms">
+      <summary class="faq__p">Quando aparece o resultado?</summary>
+      <div class="faq__r">Parte do efeito aparece logo; o restante vem com a produção de colágeno, ao longo dos meses seguintes.</div>
+    </details><details class="faq__item" data-reveal style="--d:150ms">
+      <summary class="faq__p">Toxina e preenchimento podem ser feitos junto?</summary>
+      <div class="faq__r">Muitas vezes, sim, mas a ordem e o intervalo entre os procedimentos são definidos na avaliação.</div>
+    </details><details class="faq__item" data-reveal style="--d:200ms">
+      <summary class="faq__p">Quem faz os procedimentos?</summary>
+      <div class="faq__r">A própria Dra. Tati Panato, farmacêutica com especialização em estética avançada.</div>
+    </details><details class="faq__item" data-reveal style="--d:250ms">
+      <summary class="faq__p">Como agendar?</summary>
+      <div class="faq__r">Pelo WhatsApp (31) 99334-5014. A avaliação vem antes de qualquer procedimento.</div>
+    </details></div>
+  </div>
+</section>
+<section class="unid unid--unica section" id="unidades">
+  <div class="wrap">
+    <h2 data-reveal>Onde estamos</h2>
+    <div class="unid__grade"><ul class="unid__lista"><li class="unid__item" data-reveal style="--d:0ms">
+      <h3 class="unid__bairro">Funcionários · Belo Horizonte/MG</h3>
+      <dl class="unid__dados"><div class="unid__linha"><dt>Endereço</dt><dd>Av. Getúlio Vargas, 54 · Centro Comercial Getúlio Vargas</dd></div><div class="unid__linha"><dt>Telefone</dt><dd>(31) 99334-5014 · WhatsApp</dd></div><div class="unid__linha"><dt>Horário</dt><dd>Seg a sex, 10h às 19h · entrada e banheiro acessíveis</dd></div></dl>
+    </li></ul><div class="unid__painel" data-reveal><svg class="ico-saude unid__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21.5s-7-6.1-7-11.5a7 7 0 0 1 14 0c0 5.4-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.5"/></svg><p class="unid__lugar">Funcionários · Belo Horizonte/MG</p><span class="unid__acento"><svg class="luz luz--accent" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet" role="presentation" aria-hidden="true" focusable="false"><path class="luz__prisma" d="M 120 56 L 156 100 L 120 144 L 84 100 Z"/><line class="luz__raio" style="--i:0" x1="120" y1="100" x2="208.4" y2="62.5"/><line class="luz__raio" style="--i:1" x1="120" y1="100" x2="216.0" y2="100.0"/><line class="luz__raio" style="--i:2" x1="120" y1="100" x2="208.4" y2="137.5"/></svg></span></div></div>
+    <p class="unid__cta">
+      <a class="btn" href="https://wa.me/5531993345014?text=Ol%C3%A1!%20Vim%20pelo%20site.">Combinar um horário</a>
+    </p>
+  </div>
+</section>
+<section class="cta cta--bloco-cheio" id="contato" data-glow>
+  <div class="wrap wrap--narrow" data-reveal>
+    
+    <h2>Comece pela avaliação</h2>
+    <p class="lead">Conte o que te incomoda no rosto e marque um horário no Funcionários.</p>
+    <p class="cta__acao"><a class="btn" href="https://wa.me/5531993345014?text=Ol%C3%A1!%20Vim%20pelo%20site."><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Agendar pelo WhatsApp</a></p>
+  </div>
+</section>
+<footer class="rodape rodape--completo">
+  <div class="wrap rodape__in">
+    <p class="rodape__marca">Dra. Tati Panato · 2026</p>
+    
+    <p class="rodape__aviso small">Resultados variam de pessoa para pessoa. A indicação de qualquer procedimento depende de avaliação individual.</p>
+    <p class="rodape__autoria">Proposta · Conexxio</p>
+  </div>
+</footer>
+<div class="barra-zap"><a class="btn" href="https://wa.me/5531993345014?text=Ol%C3%A1!%20Vim%20pelo%20site."><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Agendar avaliação</a></div>
+<script>/* Sistema de movimento do kit. Roda em toda proposta.
+   Só transform e opacity — tudo no compositor, nada de layout. */
+;(() => {
+  const doc = document
+  const corpo = doc.body
+  corpo.classList.remove('no-js')
+  corpo.classList.add('js')
+
+  // Quebra o texto de um elemento em <span class="classe"> por palavra,
+  // devolvendo os espaços como nós de texto: o textContent final é idêntico
+  // ao original, e leitor de tela lê a frase inteira.
+  const quebrar = (el, classe) => {
+    const partes = el.textContent.split(/(\s+)/)
+    el.textContent = ''
+    const spans = []
+    for (const parte of partes) {
+      if (!parte) continue
+      if (/^\s+$/.test(parte)) {
+        el.append(parte)
+        continue
+      }
+      const s = doc.createElement('span')
+      s.className = classe
+      s.style.setProperty('--i', spans.length)
+      s.textContent = parte
+      el.append(s)
+      spans.push(s)
+    }
+    return spans
+  }
+
+  const limitar = (v) => Math.min(1, Math.max(0, v))
+  const espera = (ms) => new Promise((r) => setTimeout(r, ms))
+
+  /* Conversa de WhatsApp que se escreve sozinha enquanto está na tela: a
+     paciente manda, a clínica "digita" e responde; recomeça depois de uma
+     pausa. Parado, aparece inteira. */
+  const conversas = (parado) => {
+    doc.querySelectorAll('[data-conversa]').forEach((lista) => {
+      const msgs = [...lista.children]
+      if (parado) {
+        msgs.forEach((m) => m.classList.add('on'))
+        return
+      }
+      const celular = lista.closest('.celular')
+      const digitando = celular?.querySelector('[data-digitando]')
+      const status = celular?.querySelector('[data-conversa-status]')
+      let visivel = false
+      let rodando = false
+      const rodar = async () => {
+        rodando = true
+        while (visivel && !doc.hidden) {
+          msgs.forEach((m) => m.classList.remove('on'))
+          await espera(600)
+          for (const m of msgs) {
+            if (m.classList.contains('msg--clinica')) {
+              digitando?.classList.add('on')
+              if (status) status.textContent = 'digitando…'
+              await espera(1300)
+              digitando?.classList.remove('on')
+              if (status) status.textContent = 'online'
+            } else await espera(800)
+            m.classList.add('on')
+          }
+          await espera(6000)
+        }
+        rodando = false
+      }
+      new IntersectionObserver(([e]) => {
+        visivel = e.isIntersecting
+        if (visivel && !rodando) rodar()
+      }, { threshold: 0.3 }).observe(lista)
+    })
+  }
+
+  /* Tarja da moldura do hero: troca de frase como um letreiro. */
+  const tarjas = (parado) => {
+    if (parado) return
+    doc.querySelectorAll('[data-tarja]').forEach((tarja) => {
+      let frases
+      try {
+        frases = JSON.parse(tarja.dataset.tarja)
+      } catch {
+        return
+      }
+      const texto = tarja.querySelector('.tarja__texto')
+      if (!texto || frases.length < 2) return
+      let i = 0
+      setInterval(() => {
+        tarja.classList.add('sai')
+        setTimeout(() => {
+          i = (i + 1) % frases.length
+          texto.textContent = frases[i]
+          tarja.classList.remove('sai')
+        }, 380)
+      }, 4200)
+    })
+  }
+
+  // A troca de classe acima é síncrona e imediata — precisa acontecer antes
+  // de qualquer coisa, inclusive do early-return sob movimento reduzido. O
+  // resto (todo o querySelectorAll de atributos data-*) espera o documento
+  // terminar de parsear: o script é sempre o último nó do <body>, então
+  // qualquer conteúdo real de seção já existe nesse ponto de qualquer jeito;
+  // esperar só garante que isso vale mesmo quando o body é montado de forma
+  // incremental (como em teste, via injeção após o próprio <script>).
+  const iniciar = () => {
+    const parado = matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    /* Texto que acende palavra por palavra conforme a rolagem. Parado, já
+       nasce todo aceso. */
+    const acendiveis = [...doc.querySelectorAll('[data-acende]')].map((el) => ({
+      el,
+      palavras: quebrar(el, 'p'),
+    }))
+
+    /* Barra de WhatsApp do celular: aparece depois do hero, some quando o
+       bloco de contato está na tela. É função, não enfeite — roda também
+       com movimento reduzido (o CSS só tira a transição). */
+    const barra = doc.querySelector('.barra-zap')
+    const cabecalho = doc.querySelector('header.hd')
+    const topo = doc.getElementById('topo')
+    const contato = doc.getElementById('contato')
+
+    const pilhas = [...doc.querySelectorAll('[data-pilha]')].map((el) => {
+      const cartoes = [...el.children]
+      cartoes.forEach((c, n) => c.style.setProperty('--n', n))
+      return cartoes
+    })
+
+    let pendente = false
+    const quadro = () => {
+      pendente = false
+      const h = innerHeight
+      cabecalho?.classList.toggle('hd--rolou', scrollY > 40)
+      if (barra) {
+        let on = topo ? topo.getBoundingClientRect().bottom < h * 0.4 : scrollY > h * 0.6
+        if (contato) on = on && contato.getBoundingClientRect().top > h * 0.95
+        barra.classList.toggle('on', on)
+      }
+      if (parado) return
+      // No fim da página não há mais rolagem para acender o resto: o que
+      // estiver na tela acende inteiro.
+      const fim = scrollY + h >= doc.documentElement.scrollHeight - 4
+      for (const { el, palavras } of acendiveis) {
+        const r = el.getBoundingClientRect()
+        const prog = fim && r.top < h ? 1 : limitar((h * 0.85 - r.top) / (r.height + h * 0.35))
+        const acesas = Math.ceil(prog * palavras.length)
+        palavras.forEach((p, i) => p.classList.toggle('on', i < acesas))
+      }
+      for (const cartoes of pilhas) {
+        cartoes.forEach((c, i) => {
+          const prox = cartoes[i + 1]
+          if (!prox) return
+          const d = prox.getBoundingClientRect().top - c.getBoundingClientRect().top
+          const k = limitar(1 - d / c.offsetHeight)
+          c.style.transform = k ? `scale(${(1 - k * 0.06).toFixed(3)})` : ''
+          c.style.filter = k ? `brightness(${(1 - k * 0.15).toFixed(3)})` : ''
+        })
+      }
+    }
+    conversas(parado)
+    tarjas(parado)
+    if (barra || cabecalho || acendiveis.length || pilhas.length) {
+      addEventListener(
+        'scroll',
+        () => {
+          if (pendente) return
+          pendente = true
+          requestAnimationFrame(quadro)
+        },
+        { passive: true },
+      )
+      addEventListener('resize', quadro, { passive: true })
+      quadro()
+    }
+
+    if (parado) {
+      doc.querySelectorAll('[data-reveal],[data-revela]').forEach((el) => el.classList.add('is-in'))
+      for (const { palavras } of acendiveis) palavras.forEach((p) => p.classList.add('on'))
+      return
+    }
+
+    /* Título que sobe palavra por palavra. */
+    doc.querySelectorAll('[data-palavras]').forEach((el) => quebrar(el, 'w'))
+
+    /* Reveal por scroll. */
+    const obs = new IntersectionObserver(
+      (entradas) => {
+        for (const e of entradas) {
+          if (!e.isIntersecting) continue
+          e.target.classList.add('is-in')
+          obs.unobserve(e.target)
+        }
+      },
+      { rootMargin: '0px 0px -12% 0px', threshold: 0.08 },
+    )
+    doc.querySelectorAll('[data-reveal],[data-revela]').forEach((el) => obs.observe(el))
+
+    /* Contadores. O texto final já está no HTML — a contagem é enfeite por
+       cima, nunca a fonte do número. */
+    const fmt = new Intl.NumberFormat('pt-BR')
+    const contar = (el) => {
+      const alvo = Number(el.dataset.count)
+      if (!Number.isFinite(alvo)) return
+      const final = el.textContent
+      const dur = 1400
+      const t0 = performance.now()
+      const passo = (t) => {
+        const p = Math.min(1, (t - t0) / dur)
+        const eased = 1 - Math.pow(1 - p, 3)
+        if (p < 1) {
+          el.textContent = fmt.format(Math.round(alvo * eased))
+          requestAnimationFrame(passo)
+        } else {
+          el.textContent = final
+        }
+      }
+      requestAnimationFrame(passo)
+    }
+    const obsCount = new IntersectionObserver(
+      (entradas) => {
+        for (const e of entradas) {
+          if (!e.isIntersecting) continue
+          contar(e.target)
+          obsCount.unobserve(e.target)
+        }
+      },
+      { threshold: 0.6 },
+    )
+    doc.querySelectorAll('[data-count]').forEach((el) => obsCount.observe(el))
+
+    /* Parallax. */
+    const camadas = [...doc.querySelectorAll('[data-parallax]')]
+    if (camadas.length) {
+      let pendenteP = false
+      const mover = () => {
+        pendenteP = false
+        const meio = innerHeight / 2
+        for (const el of camadas) {
+          const r = el.getBoundingClientRect()
+          const d = (r.top + r.height / 2 - meio) * Number(el.dataset.parallax || 0.2)
+          el.style.transform = `translate3d(0, ${(-d).toFixed(1)}px, 0)`
+        }
+      }
+      addEventListener(
+        'scroll',
+        () => {
+          if (pendenteP) return
+          pendenteP = true
+          requestAnimationFrame(mover)
+        },
+        { passive: true },
+      )
+      mover()
+    }
+
+    /* Tilt e brilho seguem o ponteiro — só existem onde há ponteiro de
+       verdade. No toque, o wow vem da rolagem, não daqui. */
+    if (!matchMedia('(hover: hover)').matches) return
+
+    doc.querySelectorAll('[data-tilt]').forEach((el) => {
+      el.addEventListener('pointermove', (ev) => {
+        const r = el.getBoundingClientRect()
+        const x = (ev.clientX - r.left) / r.width - 0.5
+        const y = (ev.clientY - r.top) / r.height - 0.5
+        el.style.transform = `perspective(900px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg)`
+      })
+      el.addEventListener('pointerleave', () => {
+        el.style.transform = ''
+      })
+    })
+
+    doc.querySelectorAll('[data-glow]').forEach((el) => {
+      el.addEventListener('pointermove', (ev) => {
+        const r = el.getBoundingClientRect()
+        el.style.setProperty('--gx', `${ev.clientX - r.left}px`)
+        el.style.setProperty('--gy', `${ev.clientY - r.top}px`)
+      })
+    })
+  }
+
+  if (doc.readyState === 'loading') {
+    doc.addEventListener('DOMContentLoaded', iniciar)
+  } else {
+    iniciar()
+  }
+})()
+
+/* Selo "aberto agora" do cabeçalho, pelo relógio de Brasília e pelo
+   negocio.funcionamento. Detalhe pequeno que faz a página parecer viva no
+   minuto em que o dono abre o link. Sem JS, o selo fica vazio e some. */
+;(() => {
+  // O selo do cabeçalho (desktop) e o do topo da página (celular, onde não
+  // cabe ao lado do nome) mostram a mesma frase.
+  const selo = document.querySelector('[data-funcionamento]')
+  if (!selo) return
+  const selos = document.querySelectorAll('.hd__aberto, .hero__aberto')
+  let semana
+  try {
+    semana = JSON.parse(selo.dataset.funcionamento)
+  } catch {
+    return
+  }
+  const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab']
+  const NOMES = { dom: 'domingo', seg: 'segunda', ter: 'terça', qua: 'quarta', qui: 'quinta', sex: 'sexta', sab: 'sábado' }
+  const EN = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }
+  const fmt = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Sao_Paulo', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+  })
+  const minutos = (hhmm) => {
+    const [h, m] = hhmm.split(':').map(Number)
+    return h * 60 + m
+  }
+  const hora = (min) => `${Math.floor(min / 60)}h${min % 60 ? String(min % 60).padStart(2, '0') : ''}`
+  const faixa = (dia) => (semana[dia] ? semana[dia].split('-').map(minutos) : null)
+
+  const atualizar = () => {
+    const partes = Object.fromEntries(fmt.formatToParts(new Date()).map((p) => [p.type, p.value]))
+    const d = EN[partes.weekday]
+    const agora = (Number(partes.hour) % 24) * 60 + Number(partes.minute)
+    const hoje = faixa(DIAS[d])
+    let texto
+    let aberto = false
+    if (hoje && agora >= hoje[0] && agora < hoje[1]) {
+      texto = `Aberto agora · até ${hora(hoje[1])}`
+      aberto = true
+    } else if (hoje && agora < hoje[0]) {
+      texto = `Fechado · abre hoje às ${hora(hoje[0])}`
+    } else {
+      for (let k = 1; k <= 7; k++) {
+        const dia = DIAS[(d + k) % 7]
+        const f = faixa(dia)
+        if (!f) continue
+        texto = `Fechado · abre ${k === 1 ? 'amanhã' : NOMES[dia]} às ${hora(f[0])}`
+        break
+      }
+    }
+    for (const s of selos) {
+      s.textContent = texto ?? ''
+      s.classList.toggle('hd__aberto--sim', aberto)
+    }
+  }
+  atualizar()
+  setInterval(atualizar, 60000)
+})()
+
+/* Fundo vivo (wow fundo-vivo e seções na variante vivo). WebGL num quad só;
+   as cores vêm das variáveis --vivo-* do CSS do anfitrião (o hero ou uma
+   seção [data-vivo]). Cada canvas pausa fora da tela, um quadro só sob
+   movimento reduzido, fundo estático sem WebGL. */
+;(() => {
+const animar = (tela) => {
+  const hero = tela.closest('[data-vivo]') || tela.closest('.hero')
+  if (!hero) return
+  const gl = tela.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' })
+  if (!gl) {
+    tela.remove()
+    hero.classList.add(hero.matches('.hero') ? 'hero--estatico' : 'vivo--estatico')
+    return
+  }
+
+  // Resolve a cor computada de uma variável. color-mix() serializa como
+  // color(srgb r g b) em 0–1; cor simples, como rgb() em 0–255.
+  const sonda = document.createElement('span')
+  sonda.style.display = 'none'
+  hero.append(sonda)
+  const cor = (nome) => {
+    sonda.style.color = `var(${nome})`
+    const c = getComputedStyle(sonda).color
+    const n = (c.match(/[\d.]+/g) || []).map(Number)
+    return c.startsWith('color(') ? n.slice(0, 3) : n.slice(0, 3).map((v) => v / 255)
+  }
+
+  const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}'
+  const fs = `precision mediump float;
+uniform vec2 r;uniform float t;uniform vec2 m;uniform vec3 bg,c1,c2,c3;
+float b(vec2 p,vec2 c,float s){vec2 d=p-c;return exp(-dot(d,d)/s);}
+void main(){
+  vec2 uv=gl_FragCoord.xy/r;float a=r.x/r.y;vec2 p=vec2(uv.x*a,uv.y);
+  p+=.06*vec2(sin(p.y*4.+t*.7),cos(p.x*4.+t*.6));
+  vec3 col=bg;
+  col=mix(col,c1,b(p,vec2(a*(.25+.2*sin(t*.31)),.78+.08*cos(t*.43)),.10));
+  col=mix(col,c2,b(p,vec2(a*(.85+.12*cos(t*.27)),.52+.16*sin(t*.22)),.09));
+  col=mix(col,c1,.6*b(p,vec2(a*(.5+.3*cos(t*.19)),.30+.1*sin(t*.37)),.07));
+  col=mix(col,c3,.75*b(p,vec2(m.x*a,m.y),.035));
+  float g=fract(sin(dot(gl_FragCoord.xy+fract(t)*91.,vec2(12.9898,78.233)))*43758.5453);
+  col+=(g-.5)*.05;
+  gl_FragColor=vec4(col,1.);
+}`
+  const sombra = (tipo, src) => {
+    const s = gl.createShader(tipo)
+    gl.shaderSource(s, src)
+    gl.compileShader(s)
+    return s
+  }
+  const prog = gl.createProgram()
+  gl.attachShader(prog, sombra(gl.VERTEX_SHADER, vs))
+  gl.attachShader(prog, sombra(gl.FRAGMENT_SHADER, fs))
+  gl.linkProgram(prog)
+  gl.useProgram(prog)
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer())
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW)
+  const loc = gl.getAttribLocation(prog, 'p')
+  gl.enableVertexAttribArray(loc)
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0)
+  const U = (n) => gl.getUniformLocation(prog, n)
+  const cores = () => {
+    gl.uniform3fv(U('bg'), cor('--vivo-bg'))
+    gl.uniform3fv(U('c1'), cor('--vivo-1'))
+    gl.uniform3fv(U('c2'), cor('--vivo-2'))
+    gl.uniform3fv(U('c3'), cor('--vivo-3'))
+  }
+
+  // Resolução reduzida: são manchas desfocadas, não precisam de cada pixel.
+  const escala = Math.min(devicePixelRatio || 1, 1.5) * 0.6
+  const ajustar = () => {
+    tela.width = Math.max(1, Math.round(hero.clientWidth * escala))
+    tela.height = Math.max(1, Math.round(hero.clientHeight * escala))
+    gl.viewport(0, 0, tela.width, tela.height)
+  }
+  ajustar()
+  cores()
+
+  let mx = 0.72, my = 0.6, tx = mx, ty = my, livre = true
+  const seguir = (ev) => {
+    const r = hero.getBoundingClientRect()
+    tx = (ev.clientX - r.left) / r.width
+    ty = 1 - (ev.clientY - r.top) / r.height
+    livre = false
+  }
+  hero.addEventListener('pointermove', seguir, { passive: true })
+  hero.addEventListener('pointerdown', seguir, { passive: true })
+  hero.addEventListener('pointerleave', () => { livre = true }, { passive: true })
+
+  const t0 = performance.now()
+  const pintar = (agora) => {
+    const t = (agora - t0) / 1000
+    if (livre) {
+      tx = 0.62 + 0.24 * Math.sin(t * 0.4)
+      ty = 0.6 + 0.15 * Math.cos(t * 0.33)
+    }
+    mx += (tx - mx) * 0.06
+    my += (ty - my) * 0.06
+    gl.uniform2f(U('r'), tela.width, tela.height)
+    gl.uniform1f(U('t'), t)
+    gl.uniform2f(U('m'), mx, my)
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
+  }
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    pintar(t0 + 4000)
+    return
+  }
+
+  let visivel = true
+  let pedido = 0
+  const laco = (agora) => {
+    pintar(agora)
+    pedido = visivel ? requestAnimationFrame(laco) : 0
+  }
+  new IntersectionObserver(([e]) => {
+    visivel = e.isIntersecting
+    if (visivel && !pedido) pedido = requestAnimationFrame(laco)
+  }).observe(hero)
+  addEventListener('resize', ajustar, { passive: true })
+  pedido = requestAnimationFrame(laco)
+}
+  document.querySelectorAll('canvas.vivo').forEach(animar)
+})()
+
+</script>
+</body>
+</html>
